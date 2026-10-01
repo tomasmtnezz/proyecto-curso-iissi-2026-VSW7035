@@ -17,6 +17,25 @@ En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es 
 ## 2. Glosario de términos
 
 - Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+Aforo: Número máximo de personas que pueden acceder a un recinto.
+
+Backstage: Zona reservada para artistas, técnicos y personal autorizado que se encuentra detrás del escenario.
+
+Código QR: Código formado por un patrón de cuadrados que puede ser escaneado con un dispositivo móvil, normalmente es utilizado como entrada.
+
+Pasarela de pago: Sistema que permite procesar de forma segura los pagos realizados por los usuarios al comprar entradas.
+
+Ponente: Persona o grupo que participa en el evento.
+
+Promotor: Entidad encargada de promocionar y, en muchos casos, de la venta de entradas.
+
+Recinto: Espacio concreto en el que tiene lugar el evento.
+
+Reembolso: Devolución total o parcial del dinero, que puede ser debido a diversos factores.
+
+Transacción: Operación mediante la cual se realiza el pago de una entrada en la plataforma.
+
+Venta anticipada: Periodo durante el cual las entradas se ponen a la venta antes de la fecha oficial del evento o de la venta general.
 
 ## 3. Visión general del sistema
 
