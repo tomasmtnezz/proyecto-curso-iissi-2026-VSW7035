@@ -1,13 +1,16 @@
-# Título Proyecto
+# Proyecto EntradUS
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L1-G5
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Domínguez González, Mateo
+1. Martínez Zamorano , Tomás
+1. Frías Sáez, Antonio
+1. Ortiz Camino, Raúl
 
 ## 1. Introducción al problema
+
+En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espactáculos, para nuestros usuarios.    
+
 
 - Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
 
