@@ -35,8 +35,6 @@ Reembolso: Devolución total o parcial del dinero, que puede ser debido a divers
 
 Transacción: Operación mediante la cual se realiza el pago de una entrada en la plataforma.
 
-Venta anticipada: Periodo durante el cual las entradas se ponen a la venta antes de la fecha oficial del evento o de la venta general.
-
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
