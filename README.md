@@ -9,7 +9,7 @@
 
 ## 1. Introducción al problema
 
-En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espactáculos, para nuestros usuarios.    
+En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espactáculos, para nuestros usuarios.A la hora de desarrollar un proyecto de este tipo nos enfrentamos a problemas como conseguir una interfaz intuitiva para el usuario o registrar información de la actividad en la aplicación.    
 
 
 - Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
