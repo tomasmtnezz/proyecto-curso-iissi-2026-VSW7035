@@ -23,8 +23,8 @@ En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es 
 ### 3.1. Requisitos generales
 
 ### 3.2. Usuarios del sistema
--Usuario Cliente:
--Usuario OrganizadorDeEventos:
+-Usuario Cliente: Cliente que accede a la plataforma para comprar las entradas.
+-Usuario OrganizadorDeEventos: Usuario que publica la entrada de los diferentes eventos
 
 ## 4. Catálogo de requisitos
 
