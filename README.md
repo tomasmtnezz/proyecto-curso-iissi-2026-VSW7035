@@ -22,8 +22,6 @@ En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es 
 
 ### 3.1. Requisitos generales
 -Queremos gestionar la venta de entradas de diferentes eventos para su venta.
--Saber en todo momento el stock de entradas restante para cada evento.
--Incluir interfaces y gráficos para una comprensión más sencilla.
 ### 3.2. Usuarios del sistema
 -Usuario Cliente: Cliente que accede a la plataforma para comprar las entradas.
 -Usuario OrganizadorDeEventos: Usuario que publica la entrada de los diferentes eventos
