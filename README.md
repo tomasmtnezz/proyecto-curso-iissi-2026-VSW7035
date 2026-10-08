@@ -1,4 +1,4 @@
-# Proyecto LocalidadUS
+# Proyecto LocalizadUS
 
 ## Miembros del grupo L1-G5
 
