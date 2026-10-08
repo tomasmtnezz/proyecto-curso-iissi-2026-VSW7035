@@ -1,4 +1,4 @@
-# Proyecto EntradUS
+# Proyecto LocalidadUS
 
 ## Miembros del grupo L1-G5
 
