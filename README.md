@@ -11,9 +11,6 @@
 
 En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espactáculos, para nuestros usuarios.A la hora de desarrollar un proyecto de este tipo nos enfrentamos a problemas como conseguir una interfaz intuitiva para el usuario o registrar información de la actividad en la aplicación.    
 
-
-- Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
-
 ## 2. Glosario de términos
 
 - Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
@@ -41,7 +38,7 @@ Transacción: Operación mediante la cual se realiza el pago de una entrada en l
 -Queremos gestionar la venta de entradas de diferentes eventos para su venta.
 ### 3.2. Usuarios del sistema
 -Usuario Cliente: Cliente que accede a la plataforma para comprar las entradas.                                                                                    
--Usuario OrganizadorDeEventos: Usuario que publica la entrada de los diferentes eventos
+-Usuario Proveedor: Empresa que publica la entrada de los diferentes eventos.
 
 ## 4. Catálogo de requisitos
 
@@ -74,15 +71,20 @@ para [razón]
 
 #### 4.1.2. Reglas de negocio
 
-##### R.N.01. Título regla negocio
+##### R.N.01. Límite individual de compra de entradas
 
-Descripción de la regla de negocio.
+Un mismo cliente no podrá comprar más de 6 localidades para un mismo evento, para evitar la posible reventa de entradas.
+
+##### R.N.02. Límite general de compra de entradas
+
+El número de localidades vendidas no puede superar el aforo.
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
 ### 4.3. Requisitos no funcionales (opcional)
 
 **R.N.F. 01. Título requisito no funcional**
+
 Como [tipo de usuario]
 quiero [servicio]
 para [razón]
