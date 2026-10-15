@@ -46,9 +46,9 @@ Transacción: Operación mediante la cual se realiza el pago de una entrada en l
 
 #### R.F.01. Título requisito funcional
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente
+quiero comprar entradas
+para ir a un concierto.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
