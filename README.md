@@ -44,17 +44,22 @@ Transacción: Operación mediante la cual se realiza el pago de una entrada en l
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### R.F.01. Compra entradas
 
 Como cliente
 quiero comprar entradas
-para ir a un concierto.
+para ir a un evento.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
 - Descripción de la segunda comprobación a realizar
 - Se debe aplicar la regla de negocio R.N.XX.
 - ...
+
+
+  #### R.F.01. Inicio Sesión
+  Como desarrollador quiero que los usuarios puedan iniciar sesión en la plataforma con un correo electrónico y su contraseña.
+  
 
 #### 4.1.1. Requisitos de información
 
