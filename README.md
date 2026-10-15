@@ -51,10 +51,14 @@ quiero comprar entradas
 para ir a un evento.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+1 Accede a la aplicación.
+2	Busca el evento al que quiere asistir.	La aplicación muestra los eventos que coinciden con la búsqueda.
+3	Selecciona el evento deseado.	Se muestran los detalles del evento, la fecha, el lugar y el precio de las entradas.
+4	Selecciona el número de entradas que quiere comprar.	La aplicación comprueba que hay suficientes entradas disponibles.
+5	Pulsa el botón «Comprar entradas».
+6	Introduce sus datos y confirma el pago.
+7 Finaliza la compra.	La aplicación muestra un mensaje de confirmación y las entradas adquiridas, con sus códigos QR o códigos de acceso.
+8	Consulta sus entradas en su perfil.
 
 
   #### R.F.01. Inicio Sesión
