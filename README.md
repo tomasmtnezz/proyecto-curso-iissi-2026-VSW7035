@@ -91,6 +91,19 @@ Como desarrollador, quiero que el sistema envíe un correo electrónico al clien
 
 - Si quedan menos de 48 horas para comenzar un evento, se notificará a los usuarios, a no ser que ya hayan sido notificados.
 
+
+#### R.F.05. Unicidad de correo electrónico
+Como desarrollador, quiero que no se pueda crear más de una cuenta con el mismo correo electrónico.
+
+**Pruebas de aceptación**
+-Si un usuario intenta crear una cuenta con un correo electrónico que ya se encuentra en la base de datos, el sistema dará error y redigirá al usuario a la página de inicio de sesión.
+
+
+#### R.F.06. Unicidad de NIF de empresas
+Como desarrollador, quiero que no se pueda crear más de una cuenta de proovedor con un mismo NIF.
+
+**Pruebas de aceptación**
+-Si un usuario intenta crear una cuenta con un NIF que ya se encuentra en la ase de datos asociado a un proovedor, el sistema dará error y redigirá al ususairo a la página de inicio de sesión.
   
 
 #### 4.1.1. Requisitos de información
