@@ -66,9 +66,9 @@ Como desarrollador quiero que los usuarios puedan iniciar sesión en la platafor
 
 **Prueba de aceptación**
 
--Si el usuario introduce un correo electrónico que no está en la base de datos, el sistema dará error y rediccionará al usuario a la pagina de creación de cuenta.
+- Si el usuario introduce un correo electrónico que no está en la base de datos, el sistema dará error y rediccionará al usuario a la pagina de creación de cuenta.
 
--Si la contraseña que introduce el usuario no coincide con la almacenada en la base de datos para ese correo electrónico, el sistema dará error y pedirá que se introduzca de nuevo la contraseña.
+- Si la contraseña que introduce el usuario no coincide con la almacenada en la base de datos para ese correo electrónico, el sistema dará error y pedirá que se introduzca de nuevo la contraseña.
 
 #### R.F.03. Comprobación de edad
 Como responsable de temas legales, quiero que el cliente no pueda crear una cuenta si no es mayor de 16 años.
