@@ -118,6 +118,15 @@ Como desarrollador, quiero que no se puedan crear dos eventos con el mismo nombr
 
 - Si un proovedor intenta publicar un evento cuyo nombre no se ecnuentra en la base de datos pero la fecha asociada si, el sistema creará el evento.
 
+
+#### R.F.08. Seguridad contraseñas
+Como encargado de seguridad, quiero que la contraseña asociada a un usuario no puede ser de menos de 8 caracteres.
+
+**Pruebas de aceptación**
+-Si un usuario intenta crear una cuenta e introduce una contraseña con menos de 8 caractéres, el sistema dará error y pedirá al usuario introducir una contraseña distinta.
+-Si un usuario intenta crear una cuenta e introduce una contraseña con 8 caractéres o más, el sistema creará la cuenta.
+
+
 #### 4.1.1. Requisitos de información
 
 ##### R.I.01. Título requisito de información
