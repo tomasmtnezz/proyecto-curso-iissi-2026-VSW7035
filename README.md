@@ -104,7 +104,14 @@ Como desarrollador, quiero que no se pueda crear más de una cuenta de proovedor
 
 **Pruebas de aceptación**
 -Si un usuario intenta crear una cuenta con un NIF que ya se encuentra en la ase de datos asociado a un proovedor, el sistema dará error y redigirá al ususairo a la página de inicio de sesión.
-  
+
+#### R.F.07. Unicidad eventos
+Como desarrollador, quiero que no se puedan crear dos eventos con el mismo nombre y fecha.
+
+**Pruebas de aceptación**
+-Si un proovedor intenta publicar un evento cuyo nombre y fecha ya está registrado en la base de datos, dará error y pedirá cambiar el nombre del evento o la fecha de este.
+-Si un proovedor intenta publicar un evento cuyo nombre ya esta en la base de datos pero la fecha asociada no, el sistema creará el evento.
+-Si un proovedor intenta publicar un evento cuyo nombre no se ecnuentra en la base de datos pero la fecha asociada si, el sistema creará el evento.
 
 #### 4.1.1. Requisitos de información
 
