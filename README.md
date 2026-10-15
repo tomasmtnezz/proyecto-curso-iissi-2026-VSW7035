@@ -112,10 +112,15 @@ Como desarrollador, quiero que no se pueda crear más de una cuenta de proovedor
 
 Como director
 quiero disponer de la siguiente información sobre las localidades:
+
 -Que cliente la ha comprado.
+
 -Para que evento es.
+
 -Cual es la empresa proovedora de ese evento.
+
 -Cuantas localidades ha comprado ese cliente para ese evento.
+
 -Cúando ha comprado el cliente la/s localidad/es.
 
 **Prueba de aceptación**
