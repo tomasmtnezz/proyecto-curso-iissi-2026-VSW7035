@@ -127,6 +127,14 @@ Como encargado de seguridad, quiero que la contraseña asociada a un usuario no 
 -Si un usuario intenta crear una cuenta e introduce una contraseña con 8 caractéres o más, el sistema creará la cuenta.
 
 
+#### R.F.09. Unicidad de número de teléfono
+Como desarrollador, quiero que no se pueda crear más de una cuenta con el mismo número de teléfono.
+
+**Pruebas de aceptación**
+
+- Si un usuario intenta crear una cuenta con un número de teléfono que ya se encuentra en la base de datos, el sistema dará error y redigirá al usuario a la página de inicio de sesión.
+
+
 #### 4.1.1. Requisitos de información
 
 ##### R.I.01. Título requisito de información
