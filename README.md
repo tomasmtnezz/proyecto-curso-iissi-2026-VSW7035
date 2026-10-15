@@ -13,8 +13,6 @@ En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es 
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
-
 Localidad: Espacio al que se tiene acceso cuando se compra una entrada. 
 
 Aforo: Número máximo de personas que pueden acceder a un recinto.
