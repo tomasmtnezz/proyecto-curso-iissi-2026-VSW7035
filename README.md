@@ -1,4 +1,4 @@
-# Proyecto LocalizadUS
+# Proyecto EntradUS
 
 ## Miembros del grupo L1-G5
 
