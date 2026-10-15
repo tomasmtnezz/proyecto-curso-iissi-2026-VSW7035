@@ -96,14 +96,19 @@ Como desarrollador, quiero que el sistema envíe un correo electrónico al clien
 
 ##### R.I.01. Título requisito de información
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como director
+quiero disponer de la siguiente información sobre las localidades:
+-Que cliente la ha comprado.
+-Para que evento es.
+-Cual es la empresa proovedora de ese evento.
+-Cuantas localidades ha comprado ese cliente para ese evento.
+-Cúando ha comprado el cliente la/s localidad/es.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+- El sistema almacena la relación del cliente con la localidad adquirida.
+- El sistema almacena la relación entre cada localidad con su respectivo evento.
+- El sistema almacena la relación entre la empresa proovedora y el evento.
+- El sistema almacena el número de localidades compradas por un cliente para un evento y cuándo se efectuó la compra.
 
 #### 4.1.2. Reglas de negocio
 
