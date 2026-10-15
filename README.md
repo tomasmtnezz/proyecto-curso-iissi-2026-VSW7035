@@ -27,14 +27,6 @@ Backstage: Zona reservada para artistas, técnicos y personal autorizado que se 
 #### R.G.01. Gestión de usuario
 Como administrador quiero gestionar los usuarios del sistema.
 
-**Pruebas de aceptación**
-- Se deben poder crear usuarios, introduciendo un email, un número de teléfono y una contraseña.
-- Se tiene que poder elegir entre crear un usuario Cliente o Proovedor.
-- Si se elige crear un usuario Cliente el sistema debe pedir el dni y la fecha de nacimiento al usuario antes de crear la cuenta.
-- Si se elige crear un usuario Proovedor el sistema debe pedir el NIF de la empresa al usuario antes de crear la cuenta.
-- Se debe poder consultar todos los datos almacenados de un usuario.
-- Se debe poder editar los datos de los usuarios.
-- Se debe poder eliminar usuarios de la base de datos.
 
 ### 3.2. Usuarios del sistema
 -Usuario Cliente: Cliente que accede a la plataforma para comprar las entradas.                                                                                    
