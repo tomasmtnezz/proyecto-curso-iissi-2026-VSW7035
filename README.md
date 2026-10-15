@@ -69,8 +69,28 @@ para ir a un evento.
 8	Consulta sus entradas en su perfil.
 
 
-  #### R.F.01. Inicio Sesión
-  Como desarrollador quiero que los usuarios puedan iniciar sesión en la plataforma con un correo electrónico y su contraseña.
+#### R.F.02. Inicio Sesión
+Como desarrollador quiero que los usuarios puedan iniciar sesión en la plataforma con un correo electrónico y su contraseña.
+
+**Prueba de aceptación**
+-Si el usuario introduce un correo electrónico que no está en la base de datos, el sistema dará error y rediccionará al usuario a la pagina de creación de cuenta.
+-Si la contraseña que introduce el usuario no coincide con la almacenada en la base de datos para ese correo electrónico, el sistema dará error y pedirá que se introduzca de nuevo la contraseña.
+
+#### R.F.03. Comprobación de edad
+Como responsable de temas legales, quiero que el cliente no pueda crear una cuenta si no es mayor de 16 años.
+
+**Pruebas de aceptación**
+-Si el usuario introduce una fecha de nacimiento que indique que es menor de 16 años, el sistema dara error y no dejará crear la cuenta.
+-Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará la cuenta.
+
+#### R.F.04. Notificaciones
+Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
+
+**Pruebas de aceptación**
+-Si quedan 48 horas para empezar un evento, el sistema enviará un correo electrónico a todos los usuarios que hayan comprado una locacalidad para ese evento recordándoselo.
+-Si aún no quedan 48 horas para comenzar un evento, no se notificará a los usuarios.
+-Si quedan menos de 48 horas para comenzar un evento, se notificará a los usuarios, a no ser que ya hayan sido notificados.
+
   
 
 #### 4.1.1. Requisitos de información
