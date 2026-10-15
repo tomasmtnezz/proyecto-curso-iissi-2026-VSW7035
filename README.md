@@ -127,14 +127,6 @@ Como desarrollador quiero que la venta de entradas esté habilitada las veinticu
 
 Como desarrollador quiero que los eventos disponibles en la aplicación estén organizados por proveedores de confianza para evitar posibles fraudes.
 
-
-
-**R.N.F. 01. Título requisito no funcional**
-
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
-
 -- fin entregable 1 --
 
 ## 5. Modelo conceptual
