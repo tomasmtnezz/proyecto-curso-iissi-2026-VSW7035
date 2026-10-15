@@ -52,21 +52,13 @@ para ir a un evento.
 
 **Prueba de aceptación**
 
-1 Accede a la aplicación.
+- Se busca un evento, se selecciona y se muestran sus datos, la fecha, el lugar y el precio.
 
-2	Busca el evento al que quiere asistir.	La aplicación muestra los eventos que coinciden con la búsqueda.
+- Se selecciona el número de entradas que se desea comprar y se comprueba que hay suficientes entradas disponibles.
 
-3	Selecciona el evento deseado.	Se muestran los detalles del evento, la fecha, el lugar y el precio de las entradas.
+- Se confirma la compra, se realiza el pago y se muestra un mensaje de confirmación.
 
-4	Selecciona el número de entradas que quiere comprar.	La aplicación comprueba que hay suficientes entradas disponibles.
-
-5	Pulsa el botón «Comprar entradas».
-
-6	Introduce sus datos y confirma el pago.
-
-7 Finaliza la compra.	La aplicación muestra un mensaje de confirmación y las entradas adquiridas, con sus códigos QR o códigos de acceso.
-
-8	Consulta sus entradas en su perfil.
+- Se consulta el apartado «Mis entradas» y aparecen las entradas compradas.
 
 
 #### R.F.02. Inicio Sesión
