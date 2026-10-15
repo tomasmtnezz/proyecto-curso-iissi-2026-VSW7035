@@ -75,20 +75,20 @@ Como responsable de temas legales, quiero que el cliente no pueda crear una cuen
 
 **Pruebas de aceptación**
 
--Si el usuario introduce una fecha de nacimiento que indique que es menor de 16 años, el sistema dara error y no dejará crear la cuenta.
+- Si el usuario introduce una fecha de nacimiento que indique que es menor de 16 años, el sistema dara error y no dejará crear la cuenta.
 
--Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará la cuenta.
+- Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará la cuenta.
 
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
 
 **Pruebas de aceptación**
 
--Si quedan 48 horas para empezar un evento, el sistema enviará un correo electrónico a todos los usuarios que hayan comprado una locacalidad para ese evento recordándoselo.
+- Si quedan 48 horas para empezar un evento, el sistema enviará un correo electrónico a todos los usuarios que hayan comprado una locacalidad para ese evento recordándoselo.
 
--Si aún no quedan 48 horas para comenzar un evento, no se notificará a los usuarios.
+- Si aún no quedan 48 horas para comenzar un evento, no se notificará a los usuarios.
 
--Si quedan menos de 48 horas para comenzar un evento, se notificará a los usuarios, a no ser que ya hayan sido notificados.
+- Si quedan menos de 48 horas para comenzar un evento, se notificará a los usuarios, a no ser que ya hayan sido notificados.
 
   
 
