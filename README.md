@@ -9,25 +9,32 @@
 
 ## 1. Introducción al problema
 
-En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espectáculos, para nuestros usuarios.A la hora de desarrollar un proyecto de este tipo nos enfrentamos a problemas como conseguir una interfaz intuitiva para el usuario o registrar información de la actividad en la aplicación.    
+Tenemos la tarea de crear una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espectáculos, para nuestros usuarios y de organizar la información eficazmente.  
+
+A la hora de desarrollar un proyecto de este tipo nos enfrentamos a problemas como conseguir una interfaz intuitiva para el usuario o registrar información de la actividad en el servicio de venta. Para conseguirlo debemos definir un esquema claro para clasificar los diferentes elementos implicados, para facilitar un trabajo más sencillo con la información.
+    
 
 ## 2. Glosario de términos
 
 ## 3. Visión general del sistema
 
+Este sistema se encarga de gestionar datos relacionados con los diferentes elementos que se ven implicados en la venta de entradas de los eventos.
+
+Por una parte, deberá almacenar la compra de localidades asociándolas a una entrada y, por otra, guardar información de los eventos y los recintos donde estos podrían llevarse a cabo.
+
 ### 3.1. Requisitos generales
 
 #### R.G.01. Gestión de usuario
-Como administrador quiero gestionar los usuarios del sistema.
+Como administrador quiero gestionar los diferentes usuarios del sistema para controlar su actividad cuando usen el servicio.
 
 #### R.G.02. Gestión de eventos
-Como administrador quiero gestionar los eventos en el sistema.
+Como administrador quiero gestionar los eventos en el sistema para poder gestionarlos de forma eficiente.
 
 #### R.G.03. Gestión de recintos
-Como administrador quiero gestionar los recintos en el sistema.
+Como administrador quiero gestionar los recintos en el sistema para poder guardar información suya que pueda ser útil.
 
 #### R.G.04. Gestión de localidades
-Como administrador quiero gestionar las localidades del sistema.
+Como administrador quiero gestionar las localidades del sistema para facilitar y agilizar la compra y venta de entradas.
 
 
 ### 3.2. Usuarios del sistema
@@ -138,11 +145,37 @@ Quiero poder eliminar recintos del sistema.
 - Si no se elimina un recinto, este permanece registrado en la base de datos.
 
 #### R.F.04.01 Creación de localidades
-Quiero que se puedan crear localidades en el sistema asignándoles un precio, además de su evento y zona asociados.
+Quiero poder crear una localidad asociada a una zona de un evento, asignándole un precio.
 
 **Pruebas de aceptación**
-- Al crear una nueva localidad, este se almacena en la base de datos con todos sus datos correspondientes.
-- Si se intenta crear un usuario pero falta alguno de los campos requeridos, el sistema da error y este no se almacena en la base de datos.
+- Al crear una nuevo localidad, esta se almacena en la base de datos junto con su precio.
+- Si se intenta crear una localidad sin asignarle ningún precio, el sistema da error y esta no se almacena en la base de datos.
+- Si se intenta crear una localidad sin asociarla a una zona de un evento existente, el sistema da error y esta no se almacena en la base de datos.
+- Si se intenta asociar una localidad a una zona que no pertenece al recinto del evento seleccionado, el sistema da error y no permite su creación.
+
+R.F.04.02. Consulta de localidades
+Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
+
+**Pruebas de aceptación**
+- Si busco una localidad mediante el evento y la zona a la que pertenecen, el sistema muestra el precio correspondiente de dicha localidad.
+- Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
+
+R.F.04.03. Edición de localidades
+Quiero que se pueda modificar el precio de las localidades registradas en el sistema, siempre que los nuevos datos sean válidos.
+
+**Pruebas de aceptación**
+- Si se modifica el precio de una localidad, el cambio se almacena en la base de datos.
+- Si se intenta modificar una localidad y su precio queda vacío, el sistema da error y no guarda los cambios.
+- Si se intenta modificar el precio de una localidad por un valor negativo, el sistema da error y no guarda los cambios.
+
+
+R.F.04.04. Eliminación de localidades
+Quiero poder eliminar localidades registradas en el sistema.
+
+**Pruebas de aceptación**
+- Si se elimina una localidad, la base de datos deja de almacenar sus datos.
+- Si se cancela la eliminación de una localidad, esta permanece registrada en la base de datos.
+
   
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
