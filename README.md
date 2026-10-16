@@ -85,6 +85,13 @@ Quiero poder consultar los datos de los eventos registrados en el sistema con su
 **Pruebas de aceptación**
 - Si busco un evento por su nombre o su fecha, el sistema muestra los datos correspondientes de dicho evento.
 
+#### R.F.02.03 Edición de eventos
+Quiero que se puedan modificar los datos de los eventos registrados en el sistema, siempre que los nuevos datos sean válidos.
+**Pruebas de aceptación**
+- Si se modifica cualquier dato de un evento, el cambio se almacena en la base de datos.
+- Si se intenta modificar un evento y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
+- Si se intenta modificar la fecha de un evento por una fecha anterior a la actual, el sistema da error y no guarda los cambios.
+
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
 
