@@ -64,10 +64,10 @@ Quiero que se puedan crear usuarios en el sistema asignándoles un id, un correo
 - Si se intenta crear un usuario e introduce una contraseña con menos de 8 caractéres, el sistema da error y no se crea el usuario
 
 #### R.F.01.02 Consulta de usuarios
-Quiero poder consultar los datos de los usuarios con su correo electrónico y su número de telefono.
+Quiero poder consultar los datos de los usuarios con su correo electrónico, su número de telefono o su id.
 
 **Pruebas de aceptación**
-- Si busco un correo electrónico o un número de teléfono en la base de datos, puedo consultar a qué usuario pertenece y ver el resto de sus datos.
+- Si busco un correo electrónico, un número de teléfono o un id en la base de datos, puedo consultar a qué usuario pertenece y ver el resto de sus datos.
 
 #### R.F.01.03 Edición de usuarios
 Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos datos no estén asociados a otro usuario del sistema, exceptuando la contraseña, que varios usuarios pueden compartir la misma.
@@ -77,7 +77,8 @@ Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos
 - Si se intenta editar el correo electrónico de un usuario y el correo al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un correo electrónico distinto.
 - Si se intenta editar el número de teléfono de un usuario y el número al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un número de teléfono distinto.
 - Si se intenta modificar un usuario y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
-
+- Si se intenta modificar el id, el sistema da error y no lo permite.
+  
 #### R.F.01.04 Eliminación de usuarios
 Quiero poder eliminar usuarios del sistema.
 
@@ -114,6 +115,7 @@ Quiero que se puedan modificar los datos de los eventos registrados en el sistem
 - Si se modifica cualquier dato de un evento, el cambio se almacena en la base de datos.
 - Si se intenta modificar un evento y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
 - Si se intenta modificar la fecha de un evento por una fecha anterior a la actual, el sistema da error y no guarda los cambios.
+- Si se intenta modificar el id, el sistema da error y no lo permite.
 
 #### R.F.02.04 Eliminación de eventos
 Quiero poder eliminar eventos registrados en el sistema.
@@ -144,6 +146,7 @@ Quiero que se puedan modificar los datos de los recintos registrados en el siste
 - Si se modifica cualquier dato de un recinto, el cambio se almacena en la base de datos.
 - Si se intenta modificar un recinto y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
 - Si se intenta modificar un recinto y la nueva ubicación ya se encuentra en la base de datos, el sistema da error y no guarda el cambio.
+- Si se intenta modificar el id, el sistema da error y no lo permite.
 
 #### R.F.03.04 Eliminación de recintos
 Quiero poder eliminar recintos del sistema.
@@ -175,6 +178,7 @@ Quiero que se pueda modificar el precio de las localidades registradas en el sis
 - Si se modifica el precio o el id de una localidad, el cambio se almacena en la base de datos.
 - Si se intenta modificar una localidad y su precio o id queda vacío, el sistema da error y no guarda los cambios.
 - Si se intenta modificar el precio de una localidad por un valor negativo, el sistema da error y no guarda los cambios.
+- Si se intenta modificar el id, el sistema da error y no lo permite.
 
 
 #### R.F.04.04 Eliminación de localidades
@@ -209,6 +213,7 @@ Quiero que se pueda modificar el nombre y el aforo de las zonas registradas en e
 - Si se modifica el nombre o aforo de una localidad, el cambio se almacena en la base de datos.
 - Si se intenta modificar una zona y su nombre o aforo queda vacío, el sistema da error y no guarda los cambios.
 - Si se intenta modificar el aforo de una zona por un valor menor o igual que cero, el sistema da error y no guarda los cambios.
+- Si se intenta modificar el id, el sistema da error y no lo permite.
 
 
 #### R.F.05.04. Eliminación de zonas
