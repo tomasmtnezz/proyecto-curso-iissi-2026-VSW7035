@@ -187,7 +187,7 @@ Quiero poder eliminar localidades registradas en el sistema.
 
 #### 4.1.1. Requisitos de información
 
-##### RI.01.01. Información sobre los usuarios
+#### RI.01.01. Información sobre los usuarios
 
 Quiero disponer de la información correspondiente a los usuarios para controlar su actividad. Los datos necesarios serán el email, la contraseña, el nombre y el teléfono (además del NIF de la Empresa en caso de ser un proveedor y el dni y fecha de nacimiento en caso de ser un cliente). 
 
@@ -198,17 +198,17 @@ Quiero disponer de la información correspondiente a los usuarios para controlar
 - Si se modifica la información de un usuario, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
 
-##### RI.02.01. Información sobre los eventos
+#### RI.02.01. Información sobre los eventos
 
 Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el nombre, la fecha y el tipo de evento del que se trata, además del proveedor y el recinto correspondientes. 
 
-**Pruebas de aceptación*
+**Pruebas de aceptación**
 
 - El sistema almacena la información correspondiente a cada evento, incluyendo su nombre, fecha y el tipo de evento, además del proveedor y el recinto que le correspondan.
 - La información almacenada queda asociada al evento correspondiente, de forma que no se confunden los datos de distintos eventos.
 - Si se modifica la información de un evento, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
-##### RI.03.01. Información sobre los recintos
+#### RI.03.01. Información sobre los recintos
 
 Quiero disponer de la información correspondiente a los recintos para administrar su uso. Los datos necesarios serán la ubicación y el nombre.
 
@@ -218,7 +218,7 @@ Quiero disponer de la información correspondiente a los recintos para administr
 - La información almacenada queda asociada al recinto correspondiente, de forma que no se confunden los datos de distintos recintos.
 - Si se modifica la información de un recinto, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
-##### RI.04.01. Información sobre los localidades
+#### RI.04.01. Información sobre los localidades
 
 Quiero disponer de la información correspondiente a las localidades para que se desarrolle una correcta compra de entradas. Los datos necesarios serán el precio y el evento y la zona correspondientes. 
 
@@ -228,7 +228,7 @@ Quiero disponer de la información correspondiente a las localidades para que se
 - La información almacenada queda asociada a la localidad correspondiente, de forma que no se confunden los datos de distintas localidades.
 - Si se modifica la información de una localidad, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
-##### RI.05.01 Información sobre las zonas
+#### RI.05.01 Información sobre las zonas
 
 Quiero disponer de la información correspondiente a las zonas para una correcta disposición de las localidades en los eventos. Los datos necesarios serán el nombre y el aforo. 
 
