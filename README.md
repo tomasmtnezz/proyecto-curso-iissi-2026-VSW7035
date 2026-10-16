@@ -92,6 +92,12 @@ Quiero que se puedan modificar los datos de los eventos registrados en el sistem
 - Si se intenta modificar un evento y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
 - Si se intenta modificar la fecha de un evento por una fecha anterior a la actual, el sistema da error y no guarda los cambios.
 
+#### R.F.02.04 Eliminación de eventos
+Quiero poder eliminar eventos registrados en el sistema.
+**Pruebas de aceptación**
+- Si se elimina un evento del sistema, la base de datos deja de almacenar sus datos.
+- Si se cancela la eliminación de un evento, este permanece registrado en la base de datos.
+
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
 
