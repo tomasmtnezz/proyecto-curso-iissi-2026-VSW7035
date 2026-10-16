@@ -163,6 +163,7 @@ Quiero poder crear una localidad asociada a una zona y un evento, asignándole u
 - Si se intenta crear una localidad sin asignarle un id y un precio, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta crear una localidad sin asignarle los ids de una zona y de un evento existente, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta asociar una localidad a una zona que no pertenece al recinto asociado evento seleccionado, el sistema da error y no permite su creación.
+- Deberá aplicarse la regla de negocio R.N.02.
 
 #### R.F.04.02 Consulta de localidades
 Quiero poder consultar los datos de las localidades registradas en el sistema mediante los ids del evento y la zona al que pertenecen.
@@ -289,7 +290,7 @@ Un mismo cliente no podrá comprar más de 6 localidades para un mismo evento, p
 - Si un cliente compra 6 localidades para un mismo evento en una transacción y posteriormente intenta volver a comprar otra localidad para ese mismo evento, el sistema da error y muestra el siguiente mensaje: "Límite de entradas compradas para este evento alcanzado, 6 entradas."
 
 ##### R.N.02. Límite general de compra de entradas
-El número de localidades vendidas no puede superar el aforo.
+El número de localidades pertenecientes a una misma zona vendidas no puede superar el aforo de dicha zona.
 
 **Pruebas de aceptación**
 - Si se han vendido tantas localidades para una zona en un evento como aforo máximo tenga la misma, el sistema no permitirá comprar más localidades, mostrando el mensaje: "Entradas agotadas en esta zona."
