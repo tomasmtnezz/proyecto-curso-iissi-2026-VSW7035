@@ -3,7 +3,7 @@
 ## Miembros del grupo L1-G5
 
 1. Domínguez González, Mateo
-1. Martínez Zamorano , Tomás
+1. Martínez Zamorano, Tomás
 1. Frías Sáez, Antonio
 1. Ortiz Camino, Raúl
 
