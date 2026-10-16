@@ -209,24 +209,45 @@ quiero disponer de la siguiente información sobre las localidades:
 #### 4.1.2. Reglas de negocio
 
 ##### R.N.01. Límite individual de compra de entradas
-
 Un mismo cliente no podrá comprar más de 6 localidades para un mismo evento, para evitar la posible reventa de entradas.
 
-##### R.N.02. Límite general de compra de entradas
+**Pruebas de aceptación**
+- Si un cliente intenta comprar más de 6 localidades para un mismo evento en una transacción, el sistema da error y muestra el siguiente mensaje: "Límite de entradas compradas para este evento alcanzado, 6 entradas."
+- Si un cliente compra 6 localidades para un mismo evento en una transacción y posteriormente intenta volver a comprar otra localidad para ese mismo evento, el sistema da error y muestra el siguiente mensaje: "Límite de entradas compradas para este evento alcanzado, 6 entradas."
 
+##### R.N.02. Límite general de compra de entradas
 El número de localidades vendidas no puede superar el aforo.
+
+**Pruebas de aceptación**
+- Si se han vendido tantas localidades para una zona en un evento como aforo máximo tenga la misma, el sistema no permitirá comprar más localidades, mostrando el mensaje: "Entradas agotadas en esta zona."
+- Si no se han vendido aún tantas localidades para una zona en un evento como aforo máximo tenga la misma, el sistema permitirá la compra de la localidad.
+
 
 ### 4.2. Mapa de historias de usuario 
 
+
 ### 4.3. Requisitos no funcionales 
 
-**R.F.N. 01 Disponibilidad 24 horas del día.**
+#### R.N.F.01 Disponibilidad 24 horas del día
+Como director del proyecto quiero que la plataformas esté activa lo más cercano posible a 24/7 para facilitar las compras de los clientes.
 
-Como desarrollador quiero que la venta de entradas esté habilitada las veinticuatro horas del día para facilitar las compras a los clientes.
+**Pruebas de aceptación**
 
-**R.F.N. 02 Proveedores de confianza.**
+#### R.N.F.02 Control de acceso
+Como responsable de temas legales, quiero que solo puedan acceder a la base de datos del sistema los empleados de la organización para cumplir con la Ley de Protección de Datos.
 
-Como desarrollador quiero que los eventos disponibles en la aplicación estén organizados por proveedores de confianza para evitar posibles fraudes.
+**Pruebas de aceptación**
+
+#### R.N.F.03 Escalabilidad
+Como responsable de atención al cliente, quiero que el tiempo de respuesta del sistema sea menor a 2 segundos mientras haya 1000 usuarios concurrentes o menos.
+
+**Pruebas de aceptación**
+
+#### R.N.F.04 Tolerancia a fallos
+Como responsable de atención al cliente, quiero que el sistema realice una copia de seguridad diaria de la base de datos.
+
+**Pruebas de aceptación**
+
 
 -- fin entregable 1 --
 
