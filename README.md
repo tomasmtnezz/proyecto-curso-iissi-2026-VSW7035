@@ -154,7 +154,7 @@ Quiero poder crear una localidad asociada a una zona de un evento, asignándole 
 - Si se intenta crear una localidad sin asociarla a una zona de un evento existente, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta asociar una localidad a una zona que no pertenece al recinto del evento seleccionado, el sistema da error y no permite su creación.
 
-### R.F.04.02 Consulta de localidades
+#### R.F.04.02 Consulta de localidades
 
 Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
 
@@ -162,7 +162,7 @@ Quiero poder consultar los datos de las localidades registradas en el sistema me
 - Si busco una localidad mediante el evento y la zona a la que pertenecen, el sistema muestra el precio correspondiente de dicha localidad.
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
 
-### R.F.04.03 Edición de localidades
+#### R.F.04.03 Edición de localidades
 
 Quiero que se pueda modificar el precio de las localidades registradas en el sistema, siempre que los nuevos datos sean válidos.
 
@@ -172,7 +172,7 @@ Quiero que se pueda modificar el precio de las localidades registradas en el sis
 - Si se intenta modificar el precio de una localidad por un valor negativo, el sistema da error y no guarda los cambios.
 
 
-### R.F.04.04 Eliminación de localidades
+#### R.F.04.04 Eliminación de localidades
 
 Quiero poder eliminar localidades registradas en el sistema.
 
