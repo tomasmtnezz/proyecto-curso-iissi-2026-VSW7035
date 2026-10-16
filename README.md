@@ -74,7 +74,8 @@ Como responsable de temas legales, quiero que no se pueda crear un usuario si el
 - Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará el usuario.
 
 #### R.F.02.01 Creación de eventos
-Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una descripción, una fecha, una ubicación y un aforo máximo.
+Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una descripción y una fecha, además de asociarle un recinto.
+
 **Pruebas de aceptación**
 - Al crear un nuevo evento, este se almacena en la base de datos junto con su nombre, descripción, fecha, ubicación y aforo.
 - Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
