@@ -80,6 +80,11 @@ Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una de
 - Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
 - Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no permite su creación.
 
+#### R.F.02.02 Consulta de eventos
+Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre o su fecha.
+**Pruebas de aceptación**
+- Si busco un evento por su nombre o su fecha, el sistema muestra los datos correspondientes de dicho evento.
+
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
 
