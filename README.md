@@ -165,7 +165,7 @@ Quiero poder crear una localidad asociada a una zona y un evento, asignándole u
 Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
 
 **Pruebas de aceptación**
-- Si busco una localidad mediante el evento y la zona a la que pertenecen, el sistema muestra el precio y el id correspondiente de dicha localidad.
+- Si busco una localidad mediante el evento y la zona al que pertenecen, el sistema muestra el precio y el id correspondiente de dicha localidad.
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
 
 #### R.F.04.03 Edición de localidades
