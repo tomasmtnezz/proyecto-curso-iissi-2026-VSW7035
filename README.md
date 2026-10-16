@@ -32,7 +32,7 @@ Por una parte, deberá almacenar la compra de localidades asociándolas a una en
 Como administrador quiero gestionar los diferentes usuarios del sistema para controlar su actividad cuando usen el servicio.
 
 #### R.G.02. Gestión de eventos
-Como administrador quiero gestionar los eventos en el sistema para poder gestionarlos de forma eficiente.
+Como administrador quiero gestionar los eventos en el sistema para poder organizarlos de forma eficiente.
 
 #### R.G.03. Gestión de recintos
 Como administrador quiero gestionar los recintos en el sistema para poder guardar información suya que pueda ser útil.
