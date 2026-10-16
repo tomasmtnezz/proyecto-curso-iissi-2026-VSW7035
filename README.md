@@ -189,52 +189,52 @@ Quiero poder eliminar localidades registradas en el sistema.
 
 #### RI.01.01. Información sobre los usuarios
 
-Quiero disponer de la información correspondiente a los usuarios para llevar un seguimiento de su actividad. Los datos necesarios serán el email, la contraseña, el nombre y el teléfono (además del NIF de la Empresa en caso de ser un proveedor y el dni y fecha de nacimiento en caso de ser un cliente). 
+Quiero disponer de la información correspondiente a los usuarios para llevar un seguimiento de su actividad. Los datos necesarios serán el id, el email, la contraseña, el nombre y el teléfono (además del NIF de la Empresa en caso de ser un proveedor y el dni y fecha de nacimiento en caso de ser un cliente). 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada usuario, incluyendo su email, contraseña, nombre y teléfono (además de NIF de la Empresa en caso de tratarse de un proveedor y DNI y fecha de nacimiento en caso de tratarse de un cliente).
+- El sistema almacena la información correspondiente a cada usuario, incluyendo su id, email, contraseña, nombre y teléfono (además de NIF de la Empresa en caso de tratarse de un proveedor y DNI y fecha de nacimiento en caso de tratarse de un cliente).
 - La información almacenada queda asociada al usuario correspondiente, de forma que no se confunden los datos de distintos usuarios.
 - Si se modifica la información de un usuario, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
 
 #### RI.02.01. Información sobre los eventos
 
-Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el nombre, la fecha y el tipo de evento del que se trata, además del id del proveedor y el id del recinto correspondientes. 
+Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el id, el nombre, la fecha y el tipo de evento del que se trata, además del id del proveedor y el id del recinto correspondientes. 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada evento, incluyendo su nombre, fecha y el tipo de evento, además de los ids del proveedor y el recinto que le correspondan.
+- El sistema almacena la información correspondiente a cada evento, incluyendo su id, su nombre, fecha y el tipo de evento, además de los ids del proveedor y el recinto que le correspondan.
 - La información almacenada queda asociada al evento correspondiente, de forma que no se confunden los datos de distintos eventos.
 - Si se modifica la información de un evento, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
 #### RI.03.01. Información sobre los recintos
 
-Quiero disponer de la información correspondiente a los recintos para administrar su uso. Los datos necesarios serán la ubicación y el nombre.
+Quiero disponer de la información correspondiente a los recintos para administrar su uso. Los datos necesarios serán el id, la ubicación y el nombre.
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada recinto, incluyendo su ubicación y nombre.
+- El sistema almacena la información correspondiente a cada recinto, incluyendo su id, ubicación y nombre.
 - La información almacenada queda asociada al recinto correspondiente, de forma que no se confunden los datos de distintos recintos.
 - Si se modifica la información de un recinto, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
 #### RI.04.01. Información sobre los localidades
 
-Quiero disponer de la información correspondiente a las localidades para que se desarrolle una correcta compra de entradas. Los datos necesarios serán el precio y el id del evento y el id de la zona correspondientes. 
+Quiero disponer de la información correspondiente a las localidades para que se desarrolle una correcta compra de entradas. Los datos necesarios serán el id, precio y el id del evento y el id de la zona correspondientes. 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada localidad, incluyendo su precio y los ids del evento y la zona a los que pertenece.   
+- El sistema almacena la información correspondiente a cada localidad, incluyendo su id, su precio y los ids del evento y la zona a los que pertenece.   
 - La información almacenada queda asociada a la localidad correspondiente, de forma que no se confunden los datos de distintas localidades.
 - Si se modifica la información de una localidad, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
 #### RI.05.01 Información sobre las zonas
 
-Quiero disponer de la información correspondiente a las zonas para una correcta disposición de las localidades en los eventos. Los datos necesarios serán el nombre y el aforo. 
+Quiero disponer de la información correspondiente a las zonas para una correcta disposición de las localidades en los eventos. Los datos necesarios serán el id, nombre, el aforo y el id de su recinto asociado. 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada zona, incluyendo su nombre y su aforo.
+- El sistema almacena la información correspondiente a cada zona, incluyendo su id, su nombre, su aforo y el id del recinto al que pertenece.
 - La información almacenada queda asociada a la zona correspondiente, de forma que no se confunden los datos de distintas zonas.
 - Si se modifica la información de una zona, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
