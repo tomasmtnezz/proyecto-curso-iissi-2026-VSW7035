@@ -145,6 +145,7 @@ Quiero poder eliminar recintos del sistema.
 - Si no se elimina un recinto, este permanece registrado en la base de datos.
 
 #### R.F.04.01 Creación de localidades
+
 Quiero poder crear una localidad asociada a una zona de un evento, asignándole un precio.
 
 **Pruebas de aceptación**
@@ -154,6 +155,7 @@ Quiero poder crear una localidad asociada a una zona de un evento, asignándole 
 - Si se intenta asociar una localidad a una zona que no pertenece al recinto del evento seleccionado, el sistema da error y no permite su creación.
 
 R.F.04.02. Consulta de localidades
+
 Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
 
 **Pruebas de aceptación**
@@ -161,6 +163,7 @@ Quiero poder consultar los datos de las localidades registradas en el sistema me
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
 
 R.F.04.03. Edición de localidades
+
 Quiero que se pueda modificar el precio de las localidades registradas en el sistema, siempre que los nuevos datos sean válidos.
 
 **Pruebas de aceptación**
@@ -170,6 +173,7 @@ Quiero que se pueda modificar el precio de las localidades registradas en el sis
 
 
 R.F.04.04. Eliminación de localidades
+
 Quiero poder eliminar localidades registradas en el sistema.
 
 **Pruebas de aceptación**
