@@ -193,14 +193,16 @@ Quiero que se puedan crear zonas en el sistema asignándoles un id, un nombre y 
 - Si se intenta crear una zona sin asignarle el id de un recinto existente, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta crear una zona con un aforo menor o igual que cero, el sistema da un error y esta no se almacena en la base de datos.
 
-R.F.05.02. Consulta de zonas
+#### R.F.05.02. Consulta de zonas
+
 Quiero poder consultar los datos de las zonas registradas en el sistema mediante el nombre y el id del recinto al que pertenece.
 
 **Pruebas de aceptación**
 - Si busco una zona mediante su nombre y el id del recinto al que pertenecen, el sistema muestra el aforo correspondiente de dicha zona.
 - Si se intenta consultar una zona que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna zona que coincida con los criterios de búsqueda.
 
-R.F.05.03. Edición de zonas
+#### R.F.05.03. Edición de zonas
+
 Quiero que se pueda modificar el nombre y el aforo de las zonas registradas en el sistema, siempre que los nuevos datos sean válidos.
 
 **Pruebas de aceptación**
@@ -209,7 +211,8 @@ Quiero que se pueda modificar el nombre y el aforo de las zonas registradas en e
 - Si se intenta modificar el aforo de una zona por un valor menor o igual que cero, el sistema da error y no guarda los cambios.
 
 
-R.F.05.04. Eliminación de zonas
+#### R.F.05.04. Eliminación de zonas
+
 Quiero poder eliminar zonas registradas en el sistema.
 
 **Pruebas de aceptación**
