@@ -300,22 +300,26 @@ El número de localidades vendidas no puede superar el aforo.
 Como director del proyecto quiero que la plataformas esté activa lo más cercano posible a 24/7 para facilitar las compras de los clientes.
 
 **Pruebas de aceptación**
-
+- Se lleva a cabo una prueba en la que se realizan pings cada 60 segundos durante 14 días, el tiempo acumulado de inactividad no debe ser superior al 0.1%. (ISO/IEC 25023)
+- 
 #### R.N.F.02 Control de acceso
 Como responsable de temas legales, quiero que solo puedan acceder a la base de datos del sistema los empleados de la organización para cumplir con la Ley de Protección de Datos.
 
 **Pruebas de aceptación**
-
+- Se intenta acceder a la base de datos desde una red externa no autorizada y el firewall del sistema rechaza el acceso. (ISO/IEC 25010)
+  
 #### R.N.F.03 Escalabilidad
 Como responsable de atención al cliente, quiero que el tiempo de respuesta del sistema sea menor a 2 segundos mientras haya 1000 usuarios concurrentes o menos.
 
 **Pruebas de aceptación**
+- Se simulan desde 1 hasta 1000 usuarios simultáneos durante 30 minutos y el tiempo de respuesta es inferior a 2 segundos para cada petición, manteniendo una tasa de error del 0%. (ISO/IEC 25010)
 
 #### R.N.F.04 Tolerancia a fallos
-Como responsable de atención al cliente, quiero que el sistema realice una copia de seguridad diaria de la base de datos.
+Como responsable de atención al cliente, quiero que el sistema realice una copia de seguridad diaria de la base de datos, la cual se pueda restaurar en menos de una hora.
 
 **Pruebas de aceptación**
-
+- Se hace una prueba en la que se genera automáticamente una copia de seguridad, previamente programada para realizarse en una hora de poco tráfico (4:00), durante 7 días consecutivos y el archivo generado es correcto y se almacena en la ubicación definida.
+- Se hace una prueba en la que se restaura la base de datos en un entorno de prueba desde una de las copiad de seguridad y se recuperan el 100% de los archivos en un tiempo inferior a una hora.
 
 -- fin entregable 1 --
 
