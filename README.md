@@ -38,20 +38,20 @@ Como administrador quiero gestionar las localidades del sistema.
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Creación de usuarios
+#### R.F.01.01 Creación de usuarios
 Quiero que se puedan crear usuarios en el sistema asignándoles un correo electrónico, una contraseña y un número de teléfono.
 
 **Prueba de aceptación**
 - Al crear un nuevo usuario, este se almacena en la base de datos junto a su correo electrónico, su contraseña y su número de teléfono.
 - Si se intenta crear un usuario pero falta alguno de los 3 campos requeridos, el sistema da error y este no se almacena en la base de datos.
 
-#### R.F.02. Consulta de usuarios
+#### R.F.01.02 Consulta de usuarios
 Quiero poder consultar los datos de los usuarios con su correo electrónico, su número de telefono y su contraseña.
 
 **Prueba de aceptación**
 - Si busco un correo electrónico o un número de teléfono en la base de datos, puedo consultar a qué usuario pertenece y ver el resto de sus datos.
 
-#### R.F.03 Edición de usuarios
+#### R.F.01.03 Edición de usuarios
 Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos datos no estén asociados a otro usuario del sistema, exceptuando la contraseña, que varios usuarios pueden compartir la misma.
 
 **Prueba de aceptación**
@@ -59,19 +59,26 @@ Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos
 - Si se intenta editar el correo electrónico de un usuario y el correo al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un correo electrónico distinto.
 - Si se intenta editar el número de teléfono de un usuario y el número al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un número de teléfono distinto.
 
-#### R.F.04 Eliminación de usuarios
+#### R.F.01.04 Eliminación de usuarios
 Quiero poder eliminar usuarios del sistema.
 
 **Pruebas de aceptación**
 - Si se elimina a un usuario del sistema, la base de datos dejará de almacenar sus datos.
 - Si no se elimina un usuario, la base de datos seguirá almacenando sus datos.
 
-#### R.F.05. Comprobación de edad
+#### R.F.01.05 Comprobación de edad
 Como responsable de temas legales, quiero que no se pueda crear un usuario si el cliente no es mayor de 16 años.
 
 **Pruebas de aceptación**
 - Si el usuario introduce una fecha de nacimiento que indique que es menor de 16 años, el sistema dara error y creará el usuario.
 - Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará el usuario.
+
+#### R.F.01.06 Creación de eventos
+Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una descripción, una fecha, una ubicación y un aforo máximo.
+**Pruebas de aceptación**
+- Al crear un nuevo evento, este se almacena en la base de datos junto con su nombre, descripción, fecha, ubicación y aforo.
+- Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
+- Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no permite su creación.
 
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
