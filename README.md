@@ -184,6 +184,38 @@ Quiero poder eliminar localidades registradas en el sistema.
 - Si se elimina una localidad, la base de datos deja de almacenar sus datos.
 - Si no se elimina una localidad, esta permanece registrada en la base de datos.
 
+#### R.F.05.01 Creación de zonas
+Quiero que se puedan crear zonas en el sistema asignándoles un id, un nombre y aforo e id del recinto al que pertenece.
+
+**Pruebas de aceptación**
+- Al crear una nueva zona, esta se almacena en la base de datos junto con su id, nombre, aforo e id de su recinto correspondiente.
+- Si se intenta crear una zona sin asignarle ningún id o nombre, el sistema da error y esta no se almacena en la base de datos.
+- Si se intenta crear una zona sin asignarle el id de un recinto existente, el sistema da error y esta no se almacena en la base de datos.
+- Si se intenta crear una zona con un aforo menor o igual que cero, el sistema da un error y esta no se almacena en la base de datos.
+
+R.F.05.02. Consulta de zonas
+Quiero poder consultar los datos de las zonas registradas en el sistema mediante el nombre y el id del recinto al que pertenece.
+
+**Pruebas de aceptación**
+- Si busco una zona mediante su nombre y el id del recinto al que pertenecen, el sistema muestra el aforo correspondiente de dicha zona.
+- Si se intenta consultar una zona que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna zona que coincida con los criterios de búsqueda.
+
+R.F.05.03. Edición de zonas
+Quiero que se pueda modificar el nombre y el aforo de las zonas registradas en el sistema, siempre que los nuevos datos sean válidos.
+
+**Pruebas de aceptación**
+- Si se modifica el nombre o aforo de una localidad, el cambio se almacena en la base de datos.
+- Si se intenta modificar una zona y su nombre o aforo queda vacío, el sistema da error y no guarda los cambios.
+- Si se intenta modificar el aforo de una zona por un valor menor o igual que cero, el sistema da error y no guarda los cambios.
+
+
+R.F.05.04. Eliminación de zonas
+Quiero poder eliminar zonas registradas en el sistema.
+
+**Pruebas de aceptación**
+- Si se elimina una zona, la base de datos deja de almacenar sus datos.
+- Si se cancela la eliminación de una zona, esta permanece registrada en la base de datos.
+
 
 #### 4.1.1. Requisitos de información
 
