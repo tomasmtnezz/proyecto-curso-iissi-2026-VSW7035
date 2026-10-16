@@ -26,7 +26,7 @@ Como administrador quiero gestionar los eventos en el sistema.
 #### R.G.03. Gestión de recintos
 Como administrador quiero gestionar los recintos en el sistema.
 
-#### R.G.01. Gestión de localidades
+#### R.G.04. Gestión de localidades
 Como administrador quiero gestionar las localidades del sistema.
 
 
