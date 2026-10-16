@@ -38,40 +38,40 @@ Como administrador quiero gestionar las localidades del sistema.
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Compra entradas
-
-Como cliente
-quiero comprar entradas
-para ir a un evento.
+#### R.F.01. Creación de usuarios
+Quiero que se puedan crear usuarios en el sistema asignándoles un correo electrónico, una contraseña y un número de teléfono.
 
 **Prueba de aceptación**
+- Al crear un nuevo usuario, este se almacena en la base de datos junto a su correo electrónico, su contraseña y su número de teléfono.
+- Si se intenta crear un usuario pero falta alguno de los 3 campos requeridos, el sistema da error y este no se almacena en la base de datos.
 
-- Se busca un evento, se selecciona y se muestran sus datos, la fecha, el lugar y el precio.
-
-- Se selecciona el número de entradas que se desea comprar y se comprueba que hay suficientes entradas disponibles.
-
-- Se confirma la compra, se realiza el pago y se muestra un mensaje de confirmación.
-
-- Se consulta el apartado «Mis entradas» y aparecen las entradas compradas.
-
-
-#### R.F.02. Inicio Sesión
-Como desarrollador quiero que los usuarios puedan iniciar sesión en la plataforma con un correo electrónico y su contraseña.
+#### R.F.02. Consulta de usuarios
+Quiero poder consultar los datos de los usuarios con su correo electrónico, su número de telefono y su contraseña.
 
 **Prueba de aceptación**
+- Si busco un correo electrónico o un número de teléfono en la base de datos, puedo consultar a qué usuario pertenece y ver el resto de sus datos.
 
-- Si el usuario introduce un correo electrónico que no está en la base de datos, el sistema dará error y rediccionará al usuario a la pagina de creación de cuenta.
+#### R.F.03 Edición de usuarios
+Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos datos no estén asociados a otro usuario del sistema, exceptuando la contraseña, que varios usuarios pueden compartir la misma.
 
-- Si la contraseña que introduce el usuario no coincide con la almacenada en la base de datos para ese correo electrónico, el sistema dará error y pedirá que se introduzca de nuevo la contraseña.
+**Prueba de aceptación**
+- Si se edita cualquier dato de un usuario, dicho cambio se almacena en la base de datos.
+- Si se intenta editar el correo electrónico de un usuario y el correo al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un correo electrónico distinto.
+- Si se intenta editar el número de teléfono de un usuario y el número al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un número de teléfono distinto.
 
-#### R.F.03. Comprobación de edad
-Como responsable de temas legales, quiero que el cliente no pueda crear una cuenta si no es mayor de 16 años.
+#### R.F.04 Eliminación de usuarios
+Quiero poder eliminar usuarios del sistema.
 
 **Pruebas de aceptación**
+- Si se elimina a un usuario del sistema, la base de datos dejará de almacenar sus datos.
+- Si no se elimina un usuario, la base de datos seguirá almacenando sus datos.
 
-- Si el usuario introduce una fecha de nacimiento que indique que es menor de 16 años, el sistema dara error y no dejará crear la cuenta.
+#### R.F.05. Comprobación de edad
+Como responsable de temas legales, quiero que no se pueda crear un usuario si el cliente no es mayor de 16 años.
 
-- Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará la cuenta.
+**Pruebas de aceptación**
+- Si el usuario introduce una fecha de nacimiento que indique que es menor de 16 años, el sistema dara error y creará el usuario.
+- Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará el usuario.
 
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
