@@ -55,6 +55,7 @@ Quiero que se puedan crear usuarios en el sistema asignándoles un correo electr
 - Si el número de teléfono no es de la forma +XX XXXXXXXXX (siendo X un número del 0 al 9) el sistema da error y no crea el usuario.
 - En caso de ser un usuario Cliente, si el DNI no es de la forma NNNNNNNNX (siendo N un número del 0 al 9 y X una letra) el sistema da error y no crea el usuario.
 - En caso de ser un usuario Proovedor, si el NIF no es de la forma XNNNNNNNNN (siendo N un número del 0 al 9 y X una letra) el sistema da error y no crea el usuario.
+- Si se intenta crear un usuario e introduce una contraseña con menos de 8 caractéres, el sistema da error y no se crea el usuario
 
 #### R.F.01.02 Consulta de usuarios
 Quiero poder consultar los datos de los usuarios con su correo electrónico y su número de telefono.
@@ -91,7 +92,8 @@ Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una de
 **Pruebas de aceptación**
 - Al crear un nuevo evento, este se almacena en la base de datos junto con su nombre, descripción, fecha, y recinto asociado.
 - Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
-- Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no permite su creación.
+- Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no se almacena el evento en la base de datos.
+- Si se intenta crear un evento cuyo nombre y fecha coincida con el nombre y fecha de un evento almacenado en la base de datos, el sistema da error y no se almacena el evento en la base de datos.
 
 #### R.F.02.02 Consulta de eventos
 Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre o fecha.
@@ -145,17 +147,15 @@ Quiero poder eliminar recintos del sistema.
 - Si no se elimina un recinto, este permanece registrado en la base de datos.
 
 #### R.F.04.01 Creación de localidades
-
-Quiero poder crear una localidad asociada a una zona de un evento, asignándole un precio.
+Quiero poder crear una localidad asociada a una zona y un evento, asignándole un precio.
 
 **Pruebas de aceptación**
 - Al crear una nuevo localidad, esta se almacena en la base de datos junto con su precio.
 - Si se intenta crear una localidad sin asignarle ningún precio, el sistema da error y esta no se almacena en la base de datos.
-- Si se intenta crear una localidad sin asociarla a una zona de un evento existente, el sistema da error y esta no se almacena en la base de datos.
-- Si se intenta asociar una localidad a una zona que no pertenece al recinto del evento seleccionado, el sistema da error y no permite su creación.
+- Si se intenta crear una localidad sin asociarla a una zona y a un evento existente, el sistema da error y esta no se almacena en la base de datos.
+- Si se intenta asociar una localidad a una zona que no pertenece al recinto asociado evento seleccionado, el sistema da error y no permite su creación.
 
 #### R.F.04.02 Consulta de localidades
-
 Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
 
 **Pruebas de aceptación**
@@ -163,7 +163,6 @@ Quiero poder consultar los datos de las localidades registradas en el sistema me
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
 
 #### R.F.04.03 Edición de localidades
-
 Quiero que se pueda modificar el precio de las localidades registradas en el sistema, siempre que los nuevos datos sean válidos.
 
 **Pruebas de aceptación**
@@ -173,62 +172,11 @@ Quiero que se pueda modificar el precio de las localidades registradas en el sis
 
 
 #### R.F.04.04 Eliminación de localidades
-
 Quiero poder eliminar localidades registradas en el sistema.
 
 **Pruebas de aceptación**
 - Si se elimina una localidad, la base de datos deja de almacenar sus datos.
-- Si se cancela la eliminación de una localidad, esta permanece registrada en la base de datos.
-
-  
-#### R.F.04. Notificaciones
-Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
-**Pruebas de aceptación**
-- Si quedan 48 horas para empezar un evento, el sistema enviará un correo electrónico a todos los usuarios que hayan comprado una locacalidad para ese evento recordándoselo.
-- Si aún no quedan 48 horas para comenzar un evento, no se notificará a los usuarios.
-- Si quedan menos de 48 horas para comenzar un evento, se notificará a los usuarios, a no ser que ya hayan sido notificados.
-
-#### R.F.05. Unicidad de correo electrónico
-Como desarrollador, quiero que no se pueda crear más de una cuenta con el mismo correo electrónico.
-
-**Pruebas de aceptación**
-
-- Si un usuario intenta crear una cuenta con un correo electrónico que ya se encuentra en la base de datos, el sistema dará error y redigirá al usuario a la página de inicio de sesión.
-
-
-#### R.F.06. Unicidad de NIF de empresas
-Como desarrollador, quiero que no se pueda crear más de una cuenta de proovedor con un mismo NIF.
-
-**Pruebas de aceptación**
-
-- Si un usuario intenta crear una cuenta con un NIF que ya se encuentra en la ase de datos asociado a un proovedor, el sistema dará error y redigirá al ususairo a la página de inicio de sesión.
-
-#### R.F.07. Unicidad eventos
-Como desarrollador, quiero que no se puedan crear dos eventos con el mismo nombre y fecha.
-
-**Pruebas de aceptación**
-
-- Si un proovedor intenta publicar un evento cuyo nombre y fecha ya está registrado en la base de datos, dará error y pedirá cambiar el nombre del evento o la fecha de este.
-
-- Si un proovedor intenta publicar un evento cuyo nombre ya esta en la base de datos pero la fecha asociada no, el sistema creará el evento.
-
-- Si un proovedor intenta publicar un evento cuyo nombre no se ecnuentra en la base de datos pero la fecha asociada si, el sistema creará el evento.
-
-
-#### R.F.08. Seguridad contraseñas
-Como encargado de seguridad, quiero que la contraseña asociada a un usuario no puede ser de menos de 8 caracteres.
-
-**Pruebas de aceptación**
--Si un usuario intenta crear una cuenta e introduce una contraseña con menos de 8 caractéres, el sistema dará error y pedirá al usuario introducir una contraseña distinta.
--Si un usuario intenta crear una cuenta e introduce una contraseña con 8 caractéres o más, el sistema creará la cuenta.
-
-
-#### R.F.09. Unicidad de número de teléfono
-Como desarrollador, quiero que no se pueda crear más de una cuenta con el mismo número de teléfono.
-
-**Pruebas de aceptación**
-
-- Si un usuario intenta crear una cuenta con un número de teléfono que ya se encuentra en la base de datos, el sistema dará error y redigirá al usuario a la página de inicio de sesión.
+- Si no se elimina una localidad, esta permanece registrada en la base de datos.
 
 
 #### 4.1.1. Requisitos de información
