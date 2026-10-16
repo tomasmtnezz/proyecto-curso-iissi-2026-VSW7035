@@ -44,7 +44,7 @@ Quiero que se puedan crear usuarios en el sistema asignándoles un correo electr
 **Prueba de aceptación**
 - Al crear un nuevo usuario, este se almacena en la base de datos con todos sus datos correspondientes.
 - Si se intenta crear un usuario pero falta alguno de los campos requeridos, el sistema da error y este no se almacena en la base de datos.
-- Si el correo electrónico no es de la forma XXX@XXX.XXX (siendo X cualquier caracter) el sistema da error y no crea el usuario.
+- Si el correo electrónico no es de la forma X...X@X...X.X...X (siendo X cualquier caracter y "..." una cantidad variable de caracteres) el sistema da error y no crea el usuario.
 - Si el número de teléfono no es de la forma +XX XXXXXXXXX (siendo X un número del 0 al 9) el sistema da error y no crea el usuario.
 - En caso de ser un usuario Cliente, si el DNI no es de la forma NNNNNNNNX (siendo N un número del 0 al 9 y X una letra) el sistema da error y no crea el usuario.
 - En caso de ser un usuario Proovedor, si el NIF no es de la forma XNNNNNNNNN (siendo N un número del 0 al 9 y X una letra) el sistema da error y no crea el usuario.
@@ -87,10 +87,10 @@ Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una de
 - Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no permite su creación.
 
 #### R.F.02.02 Consulta de eventos
-Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre o su fecha.
+Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre o fecha.
 
 **Pruebas de aceptación**
-- Si busco un evento por su nombre o su fecha, el sistema muestra los datos correspondientes de dicho evento.
+- Si busco un evento por su nombre o fecha, el sistema muestra los eventos con dicho nombre o fecha y el resto de sus datos.
 
 #### R.F.02.03 Edición de eventos
 Quiero que se puedan modificar los datos de los eventos registrados en el sistema, siempre que los nuevos datos sean válidos.
@@ -104,31 +104,45 @@ Quiero que se puedan modificar los datos de los eventos registrados en el sistem
 Quiero poder eliminar eventos registrados en el sistema.
 **Pruebas de aceptación**
 - Si se elimina un evento del sistema, la base de datos deja de almacenar sus datos.
-- Si se cancela la eliminación de un evento, este permanece registrado en la base de datos.
+- Si no se elimina un evento, este permanece registrado en la base de datos.
 
 #### R.F.03.01 Creación de recintos
 Quiero que se puedan crear recintos en el sistema asignándoles un nombre y una ubicación.
+
 **Pruebas de aceptación**
 - Al crear un nuevo recinto, este se almacena en la base de datos junto con su nombre y ubicación.
 - Si se intenta crear un recinto y falta alguno de los campos obligatorios, el sistema da error y no almacena el recinto en la base de datos.
+- Si se intenta crear un recinto y la ubicación ya se encuentra en la base de datos, el sistema da error y no almacena el recinto en la base de datos.
 
 #### R.F.03.02 Consulta de recintos
 Quiero poder consultar los datos de los recintos registrados en el sistema mediante su nombre o su ubicación.
+
 **Pruebas de aceptación**
-- Si busco un recinto por su nombre o su ubicación, el sistema muestra los datos correspondientes a dicho recinto.
+- Si se busca un recinto por su ubicación, el sistema muestra el recinto con sus datos correspondientes
+- Si se busca un recinto por su nombre, el sistema muestra los recintos que coinciden con el nombre introducido, cada uno con su respectiva ubicación.
 - Si se intenta consultar un recinto que no existe en la base de datos, el sistema informa de que no se ha encontrado ningún recinto que coincida con los criterios de búsqueda.
 
 #### R.F.03.03 Edición de recintos
-Quiero que se puedan modificar los datos de los recintos registrados en el sistema, siempre que los nuevos datos sean válidos.
+Quiero que se puedan modificar los datos de los recintos registrados en el sistema.
+
 **Pruebas de aceptación**
 - Si se modifica cualquier dato de un recinto, el cambio se almacena en la base de datos.
 - Si se intenta modificar un recinto y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
+- Si se intenta modificar un recinto y la nueva ubicación ya se encuentra en la base de datos, el sistema da error y no guarda el cambio.
 
 #### R.F.03.04 Eliminación de recintos
-Quiero poder eliminar recintos registrados en el sistema.
+Quiero poder eliminar recintos del sistema.
+
 **Pruebas de aceptación**
 - Si se elimina un recinto del sistema, la base de datos deja de almacenar sus datos.
-- Si se cancela la eliminación de un recinto, este permanece registrado en la base de datos.
+- Si no se elimina un recinto, este permanece registrado en la base de datos.
+
+#### R.F.04.01 Creación de localidades
+Quiero que se puedan crear localidades en el sistema asignándoles un precio, además de su evento y zona asociados.
+
+**Pruebas de aceptación**
+- Al crear una nueva localidad, este se almacena en la base de datos con todos sus datos correspondientes.
+- Si se intenta crear un usuario pero falta alguno de los campos requeridos, el sistema da error y este no se almacena en la base de datos.
   
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
