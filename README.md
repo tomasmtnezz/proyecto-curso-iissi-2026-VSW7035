@@ -185,26 +185,59 @@ Quiero poder eliminar localidades registradas en el sistema.
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+#### 4.1.1. Requisitos de información
 
-Como director
-quiero disponer de la siguiente información sobre las localidades:
+##### RI.01.01. Información sobre los usuarios
 
--Que cliente la ha comprado.
+Quiero disponer de la información correspondiente a los usuarios para controlar su actividad. Los datos necesarios serán el email, la contraseña, el nombre y el teléfono (además del NIF de la Empresa en caso de ser un proveedor y el dni y fecha de nacimiento en caso de ser un cliente). 
 
--Para que evento es.
+**Pruebas de aceptación**
 
--Cual es la empresa proovedora de ese evento.
+- El sistema almacena la información correspondiente a cada usuario, incluyendo su email, contraseña, nombre y teléfono (además de NIF de la Empresa en caso de tratarse de un proveedor y DNI y fecha de nacimiento en caso de tratarse de un cliente).
+- La información almacenada queda asociada al usuario correspondiente, de forma que no se confunden los datos de distintos usuarios.
+- Si se modifica la información de un usuario, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
--Cuantas localidades ha comprado ese cliente para ese evento.
 
--Cúando ha comprado el cliente la/s localidad/es.
+##### RI.02.01. Información sobre los eventos
 
-**Prueba de aceptación**
-- El sistema almacena la relación del cliente con la localidad adquirida.
-- El sistema almacena la relación entre cada localidad con su respectivo evento.
-- El sistema almacena la relación entre la empresa proovedora y el evento.
-- El sistema almacena el número de localidades compradas por un cliente para un evento y cuándo se efectuó la compra.
+Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el nombre, la fecha y el tipo de evento del que se trata, además del proveedor y el recinto correspondientes. 
+
+**Pruebas de aceptación*
+
+- El sistema almacena la información correspondiente a cada evento, incluyendo su nombre, fecha y el tipo de evento, además del proveedor y el recinto que le correspondan.
+- La información almacenada queda asociada al evento correspondiente, de forma que no se confunden los datos de distintos eventos.
+- Si se modifica la información de un evento, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
+
+##### RI.03.01. Información sobre los recintos
+
+Quiero disponer de la información correspondiente a los recintos para administrar su uso. Los datos necesarios serán la ubicación y el nombre.
+
+**Pruebas de aceptación**
+
+- El sistema almacena la información correspondiente a cada recinto, incluyendo su ubicación y  nombre.
+- La información almacenada queda asociada al recinto correspondiente, de forma que no se confunden los datos de distintos recintos.
+- Si se modifica la información de un recinto, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
+
+##### RI.04.01. Información sobre los localidades
+
+Quiero disponer de la información correspondiente a las localidades para que se desarrolle una correcta compra de entradas. Los datos necesarios serán el precio y el evento y la zona correspondientes. 
+
+**Pruebas de aceptación**
+
+- El sistema almacena la información correspondiente a cada localidad, incluyendo su precio y el evento y la zona a los que pertenece.   
+- La información almacenada queda asociada a la localidad correspondiente, de forma que no se confunden los datos de distintas localidades.
+- Si se modifica la información de una localidad, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
+
+##### RI.05.01 Información sobre las zonas
+
+Quiero disponer de la información correspondiente a las zonas para una correcta disposición de las localidades en los eventos. Los datos necesarios serán el nombre y el aforo. 
+
+**Pruebas de aceptación**
+
+- El sistema almacena la información correspondiente a cada zona, incluyendo su nombre y su aforo.
+- La información almacenada queda asociada a la zona correspondiente, de forma que no se confunden los datos de distintas zonas.
+- Si se modifica la información de una zona, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
+
 
 #### 4.1.2. Reglas de negocio
 
