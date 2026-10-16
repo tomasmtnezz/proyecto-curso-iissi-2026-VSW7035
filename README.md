@@ -103,10 +103,11 @@ Quiero que se puedan crear eventos en el sistema asignándoles un id, un nombre,
 - Si se intenta crear un evento cuyo nombre y fecha coincida con el nombre y fecha de un evento almacenado en la base de datos, el sistema da error y no se almacena el evento en la base de datos.
 
 #### R.F.02.02 Consulta de eventos
-Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre o fecha.
+Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre, fecha o id.
 
 **Pruebas de aceptación**
 - Si busco un evento por su nombre o fecha, el sistema muestra los eventos con dicho nombre o fecha y el resto de sus datos.
+- Si busco un evento por su id, el sistema muestra el evento con sus datos.
 
 #### R.F.02.03 Edición de eventos
 Quiero que se puedan modificar los datos de los eventos registrados en el sistema, siempre que los nuevos datos sean válidos.
@@ -119,6 +120,7 @@ Quiero que se puedan modificar los datos de los eventos registrados en el sistem
 
 #### R.F.02.04 Eliminación de eventos
 Quiero poder eliminar eventos registrados en el sistema.
+
 **Pruebas de aceptación**
 - Si se elimina un evento del sistema, la base de datos deja de almacenar sus datos.
 - Si no se elimina un evento, este permanece registrado en la base de datos.
@@ -132,10 +134,10 @@ Quiero que se puedan crear recintos en el sistema asignándoles un id, un nombre
 - Si se intenta crear un recinto y la ubicación ya se encuentra en la base de datos, el sistema da error y no almacena el recinto en la base de datos.
 
 #### R.F.03.02 Consulta de recintos
-Quiero poder consultar los datos de los recintos registrados en el sistema mediante su nombre o su ubicación.
+Quiero poder consultar los datos de los recintos registrados en el sistema mediante su nombre, su ubicación o id.
 
 **Pruebas de aceptación**
-- Si se busca un recinto por su ubicación, el sistema muestra el recinto con sus datos correspondientes
+- Si se busca un recinto por su ubicación o id, el sistema muestra el recinto con sus datos correspondientes
 - Si se busca un recinto por su nombre, el sistema muestra los recintos que coinciden con el nombre introducido, cada uno con su respectiva ubicación.
 - Si se intenta consultar un recinto que no existe en la base de datos, el sistema informa de que no se ha encontrado ningún recinto que coincida con los criterios de búsqueda.
 
@@ -166,11 +168,12 @@ Quiero poder crear una localidad asociada a una zona y un evento, asignándole u
 - Deberá aplicarse la regla de negocio R.N.02.
 
 #### R.F.04.02 Consulta de localidades
-Quiero poder consultar los datos de las localidades registradas en el sistema mediante los ids del evento y la zona al que pertenecen.
+Quiero poder consultar los datos de las localidades registradas en el sistema mediante su id o los ids del evento y la zona al que pertenecen.
 
 **Pruebas de aceptación**
 - Si busco una localidad mediante los ids del evento y la zona al que pertenecen, el sistema muestra el precio y el id correspondiente de dicha localidad.
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
+- Si busco una localidad por su id, el sistema muestra la localidad con sus datos correspondientes.
 
 #### R.F.04.03 Edición de localidades
 Quiero que se pueda modificar el precio de las localidades registradas en el sistema, siempre que los nuevos datos sean válidos.
@@ -200,11 +203,12 @@ Quiero que se puedan crear zonas en el sistema asignándoles un id, un nombre y 
 
 #### R.F.05.02. Consulta de zonas
 
-Quiero poder consultar los datos de las zonas registradas en el sistema mediante el nombre y el id del recinto al que pertenece.
+Quiero poder consultar los datos de las zonas registradas en el sistema mediante su id o el nombre y el id del recinto al que pertenece.
 
 **Pruebas de aceptación**
 - Si busco una zona mediante su nombre y el id del recinto al que pertenecen, el sistema muestra el aforo correspondiente de dicha zona.
 - Si se intenta consultar una zona que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna zona que coincida con los criterios de búsqueda.
+- Si busco una zona mediante su id, el sistema muestra la zona con sus datos.
 
 #### R.F.05.03. Edición de zonas
 
