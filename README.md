@@ -40,6 +40,8 @@ Como administrador quiero gestionar los recintos en el sistema para poder guarda
 #### R.G.04. Gestión de localidades
 Como administrador quiero gestionar las localidades del sistema para facilitar y agilizar la compra y venta de entradas.
 
+#### R.G.05. Gestión de Zonas
+Como administrador quiero gestionar las zonas del sistema para clasificar diferentes espacios en un recinto.
 
 ### 3.2. Usuarios del sistema
 -Usuario Cliente: Cliente que accede a la plataforma para comprar las entradas.                                                                                    
@@ -187,7 +189,7 @@ Quiero poder eliminar localidades registradas en el sistema.
 
 #### RI.01.01. Información sobre los usuarios
 
-Quiero disponer de la información correspondiente a los usuarios para controlar su actividad. Los datos necesarios serán el email, la contraseña, el nombre y el teléfono (además del NIF de la Empresa en caso de ser un proveedor y el dni y fecha de nacimiento en caso de ser un cliente). 
+Quiero disponer de la información correspondiente a los usuarios para llevar un seguimiento de su actividad. Los datos necesarios serán el email, la contraseña, el nombre y el teléfono (además del NIF de la Empresa en caso de ser un proveedor y el dni y fecha de nacimiento en caso de ser un cliente). 
 
 **Pruebas de aceptación**
 
