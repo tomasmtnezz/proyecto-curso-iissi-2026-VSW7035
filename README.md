@@ -54,7 +54,7 @@ Como administrador quiero gestionar las zonas del sistema para clasificar difere
 #### R.F.01.01 Creación de usuarios
 Quiero que se puedan crear usuarios en el sistema asignándoles un id, un correo electrónico, una contraseña y un número de teléfono. En caso de que el usuario sea un proveedor debe de asignársele también el NIF de la empresa, y si es un cliente, el DNI y la fecha de nacimiento de este. 
 
-**Prueba de aceptación**
+**Pruebas de aceptación**
 - Al crear un nuevo usuario, este se almacena en la base de datos con todos sus datos correspondientes.
 - Si se intenta crear un usuario pero falta alguno de los campos requeridos, el sistema da error y este no se almacena en la base de datos.
 - Si el correo electrónico no es de la forma X...X@X...X.X...X (siendo X cualquier caracter y "..." una cantidad variable de caracteres) el sistema da error y no crea el usuario.
@@ -66,13 +66,13 @@ Quiero que se puedan crear usuarios en el sistema asignándoles un id, un correo
 #### R.F.01.02 Consulta de usuarios
 Quiero poder consultar los datos de los usuarios con su correo electrónico y su número de telefono.
 
-**Prueba de aceptación**
+**Pruebas de aceptación**
 - Si busco un correo electrónico o un número de teléfono en la base de datos, puedo consultar a qué usuario pertenece y ver el resto de sus datos.
 
 #### R.F.01.03 Edición de usuarios
 Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos datos no estén asociados a otro usuario del sistema, exceptuando la contraseña, que varios usuarios pueden compartir la misma.
 
-**Prueba de aceptación**
+**Pruebas de aceptación**
 - Si se edita cualquier dato de un usuario, dicho cambio se almacena en la base de datos.
 - Si se intenta editar el correo electrónico de un usuario y el correo al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un correo electrónico distinto.
 - Si se intenta editar el número de teléfono de un usuario y el número al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un número de teléfono distinto.
