@@ -50,7 +50,7 @@ Como administrador quiero gestionar las localidades del sistema para facilitar y
 ### 4.1. Requisitos funcionales
 
 #### R.F.01.01 Creación de usuarios
-Quiero que se puedan crear usuarios en el sistema asignándoles un correo electrónico, una contraseña y un número de teléfono. En caso de que el usuario sea un proovedor debe de asignársele también el NIF de la empresa, y si es un cliente, el DNI y la fecha de nacimiento de este. 
+Quiero que se puedan crear usuarios en el sistema asignándoles un id, un correo electrónico, una contraseña y un número de teléfono. En caso de que el usuario sea un proveedor debe de asignársele también el NIF de la empresa, y si es un cliente, el DNI y la fecha de nacimiento de este. 
 
 **Prueba de aceptación**
 - Al crear un nuevo usuario, este se almacena en la base de datos con todos sus datos correspondientes.
@@ -91,10 +91,10 @@ Como responsable de temas legales, quiero que no se pueda crear un usuario si el
 - Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará el usuario.
 
 #### R.F.02.01 Creación de eventos
-Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una descripción y una fecha, además de asociarle un recinto.
+Quiero que se puedan crear eventos en el sistema asignándoles un id, un nombre, una descripción y una fecha, además de asociarle un recinto.
 
 **Pruebas de aceptación**
-- Al crear un nuevo evento, este se almacena en la base de datos junto con su nombre, descripción, fecha, y recinto asociado.
+- Al crear un nuevo evento, este se almacena en la base de datos junto con su id, nombre, descripción, fecha, y recinto asociado.
 - Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
 - Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no se almacena el evento en la base de datos.
 - Si se intenta crear un evento cuyo nombre y fecha coincida con el nombre y fecha de un evento almacenado en la base de datos, el sistema da error y no se almacena el evento en la base de datos.
@@ -120,10 +120,10 @@ Quiero poder eliminar eventos registrados en el sistema.
 - Si no se elimina un evento, este permanece registrado en la base de datos.
 
 #### R.F.03.01 Creación de recintos
-Quiero que se puedan crear recintos en el sistema asignándoles un nombre y una ubicación.
+Quiero que se puedan crear recintos en el sistema asignándoles un id, un nombre y una ubicación.
 
 **Pruebas de aceptación**
-- Al crear un nuevo recinto, este se almacena en la base de datos junto con su nombre y ubicación.
+- Al crear un nuevo recinto, este se almacena en la base de datos junto con su id, su nombre y ubicación.
 - Si se intenta crear un recinto y falta alguno de los campos obligatorios, el sistema da error y no almacena el recinto en la base de datos.
 - Si se intenta crear un recinto y la ubicación ya se encuentra en la base de datos, el sistema da error y no almacena el recinto en la base de datos.
 
@@ -151,11 +151,11 @@ Quiero poder eliminar recintos del sistema.
 - Si no se elimina un recinto, este permanece registrado en la base de datos.
 
 #### R.F.04.01 Creación de localidades
-Quiero poder crear una localidad asociada a una zona y un evento, asignándole un precio.
+Quiero poder crear una localidad asociada a una zona y un evento, asignándole un id y un precio.
 
 **Pruebas de aceptación**
-- Al crear una nuevo localidad, esta se almacena en la base de datos junto con su precio.
-- Si se intenta crear una localidad sin asignarle ningún precio, el sistema da error y esta no se almacena en la base de datos.
+- Al crear una nuevo localidad, esta se almacena en la base de datos junto con su  id y precio.
+- Si se intenta crear una localidad sin asignarle un id y un precio, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta crear una localidad sin asociarla a una zona y a un evento existente, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta asociar una localidad a una zona que no pertenece al recinto asociado evento seleccionado, el sistema da error y no permite su creación.
 
@@ -163,15 +163,15 @@ Quiero poder crear una localidad asociada a una zona y un evento, asignándole u
 Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
 
 **Pruebas de aceptación**
-- Si busco una localidad mediante el evento y la zona a la que pertenecen, el sistema muestra el precio correspondiente de dicha localidad.
+- Si busco una localidad mediante el evento y la zona a la que pertenecen, el sistema muestra el precio y el id correspondiente de dicha localidad.
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
 
 #### R.F.04.03 Edición de localidades
 Quiero que se pueda modificar el precio de las localidades registradas en el sistema, siempre que los nuevos datos sean válidos.
 
 **Pruebas de aceptación**
-- Si se modifica el precio de una localidad, el cambio se almacena en la base de datos.
-- Si se intenta modificar una localidad y su precio queda vacío, el sistema da error y no guarda los cambios.
+- Si se modifica el precio o el id de una localidad, el cambio se almacena en la base de datos.
+- Si se intenta modificar una localidad y su precio o id queda vacío, el sistema da error y no guarda los cambios.
 - Si se intenta modificar el precio de una localidad por un valor negativo, el sistema da error y no guarda los cambios.
 
 
@@ -182,8 +182,6 @@ Quiero poder eliminar localidades registradas en el sistema.
 - Si se elimina una localidad, la base de datos deja de almacenar sus datos.
 - Si no se elimina una localidad, esta permanece registrada en la base de datos.
 
-
-#### 4.1.1. Requisitos de información
 
 #### 4.1.1. Requisitos de información
 
@@ -200,11 +198,11 @@ Quiero disponer de la información correspondiente a los usuarios para controlar
 
 #### RI.02.01. Información sobre los eventos
 
-Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el nombre, la fecha y el tipo de evento del que se trata, además del proveedor y el recinto correspondientes. 
+Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el nombre, la fecha y el tipo de evento del que se trata, además del id del proveedor y el id del recinto correspondientes. 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada evento, incluyendo su nombre, fecha y el tipo de evento, además del proveedor y el recinto que le correspondan.
+- El sistema almacena la información correspondiente a cada evento, incluyendo su nombre, fecha y el tipo de evento, además de los ids del proveedor y el recinto que le correspondan.
 - La información almacenada queda asociada al evento correspondiente, de forma que no se confunden los datos de distintos eventos.
 - Si se modifica la información de un evento, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
@@ -214,17 +212,17 @@ Quiero disponer de la información correspondiente a los recintos para administr
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada recinto, incluyendo su ubicación y  nombre.
+- El sistema almacena la información correspondiente a cada recinto, incluyendo su ubicación y nombre.
 - La información almacenada queda asociada al recinto correspondiente, de forma que no se confunden los datos de distintos recintos.
 - Si se modifica la información de un recinto, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
 #### RI.04.01. Información sobre los localidades
 
-Quiero disponer de la información correspondiente a las localidades para que se desarrolle una correcta compra de entradas. Los datos necesarios serán el precio y el evento y la zona correspondientes. 
+Quiero disponer de la información correspondiente a las localidades para que se desarrolle una correcta compra de entradas. Los datos necesarios serán el precio y el id del evento y el id de la zona correspondientes. 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada localidad, incluyendo su precio y el evento y la zona a los que pertenece.   
+- El sistema almacena la información correspondiente a cada localidad, incluyendo su precio y los ids del evento y la zona a los que pertenece.   
 - La información almacenada queda asociada a la localidad correspondiente, de forma que no se confunden los datos de distintas localidades.
 - Si se modifica la información de una localidad, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
