@@ -9,9 +9,13 @@
 
 ## 1. Introducción al problema
 
-Tenemos la tarea de crear una plataforma de venta de entradas. Nuestra idea es ofrecer una forma sencilla de obtener entradas para diversos eventos, ya sean conciertos, festivales o espectáculos, para nuestros usuarios y de organizar la información eficazmente.  
+En este proyecto vamos a crear una plataforma para venta de entradas. En esta vamos a tener dos tipos de usuario, cliente y proovedor. El cliente será el usuario que compre la entrada, y el proveedor el que publique los distintos eventos para los que se ofrece la venta de las entradas. Cada evento tiene asociado un recinto, que tendrá también asociado zonas con un aforo máximo. Para cada zona habrá tantas localidades como aforo máximo tenga esta. El cliente compra una localidad que tendrá una entrada asociada, con su respectivo id y la fecha en la que se efectuó la compra.
 
-A la hora de desarrollar un proyecto de este tipo nos enfrentamos a problemas como conseguir una interfaz intuitiva para el usuario o registrar información de la actividad en el servicio de venta. Para conseguirlo debemos definir un esquema claro para clasificar los diferentes elementos implicados, para facilitar un trabajo más sencillo con la información.
+Partimos de la base recibida en las clases de teoría, la cual aplicaremos en este proyecto refinando nuestros conocimientos en un entorno real y práctico.
+
+A la hora de desarrollar un proyecto de este tipo nos enfrentamos a problemas como conseguir una interfaz intuitiva para el usuario o almacenar todos los datos correpondientes para cada entidad. Para conseguirlo debemos definir un esquema claro para clasificar los diferentes elementos implicados.
+
+Esperamos superar con éxito el objetivo, creando una plataforma funcional y fácil de utilizar.
     
 
 ## 2. Glosario de términos
