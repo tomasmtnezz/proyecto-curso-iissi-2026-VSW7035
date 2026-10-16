@@ -156,7 +156,7 @@ Quiero poder eliminar recintos del sistema.
 Quiero poder crear una localidad asociada a una zona y un evento, asignándole un id y un precio.
 
 **Pruebas de aceptación**
-- Al crear una nuevo localidad, esta se almacena en la base de datos junto con su  id y precio.
+- Al crear una nueva localidad, esta se almacena en la base de datos junto con su id y precio.
 - Si se intenta crear una localidad sin asignarle un id y un precio, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta crear una localidad sin asociarla a una zona y a un evento existente, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta asociar una localidad a una zona que no pertenece al recinto asociado evento seleccionado, el sistema da error y no permite su creación.
