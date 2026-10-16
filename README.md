@@ -22,9 +22,9 @@ Esperamos superar con éxito el objetivo, creando una plataforma funcional y fá
 
 ## 3. Visión general del sistema
 
-Este sistema se encarga de gestionar datos relacionados con los diferentes elementos que se ven implicados en la venta de entradas de los eventos.
+Este sistema se encargará de gestionar datos relacionados con los diferentes elementos que se ven implicados en la venta de entradas de los eventos.
 
-Por una parte, deberá almacenar la compra de localidades asociándolas a una entrada y, por otra, guardar información de los eventos y los recintos donde estos podrían llevarse a cabo.
+Por una parte deberá almacenar la compra de localidades, asociándolas a una entrada y, por otra, guardar información sobre eventos y los recintos donde estos podrían llevarse a cabo.
 
 ### 3.1. Requisitos generales
 
