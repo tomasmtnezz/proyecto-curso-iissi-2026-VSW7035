@@ -158,14 +158,14 @@ Quiero poder crear una localidad asociada a una zona y un evento, asignándole u
 **Pruebas de aceptación**
 - Al crear una nueva localidad, esta se almacena en la base de datos junto con su id y precio.
 - Si se intenta crear una localidad sin asignarle un id y un precio, el sistema da error y esta no se almacena en la base de datos.
-- Si se intenta crear una localidad sin asociarla a una zona y a un evento existente, el sistema da error y esta no se almacena en la base de datos.
+- Si se intenta crear una localidad sin asignarle los ids de una zona y de un evento existente, el sistema da error y esta no se almacena en la base de datos.
 - Si se intenta asociar una localidad a una zona que no pertenece al recinto asociado evento seleccionado, el sistema da error y no permite su creación.
 
 #### R.F.04.02 Consulta de localidades
-Quiero poder consultar los datos de las localidades registradas en el sistema mediante el evento y zona al que pertenecen.
+Quiero poder consultar los datos de las localidades registradas en el sistema mediante los ids del evento y la zona al que pertenecen.
 
 **Pruebas de aceptación**
-- Si busco una localidad mediante el evento y la zona al que pertenecen, el sistema muestra el precio y el id correspondiente de dicha localidad.
+- Si busco una localidad mediante los ids del evento y la zona al que pertenecen, el sistema muestra el precio y el id correspondiente de dicha localidad.
 - Si se intenta consultar una localidad que no existe en la base de datos, el sistema informa de que no se ha encontrado ninguna localidad que coincida con los criterios de búsqueda.
 
 #### R.F.04.03 Edición de localidades
