@@ -39,14 +39,18 @@ Como administrador quiero gestionar las localidades del sistema.
 ### 4.1. Requisitos funcionales
 
 #### R.F.01.01 Creación de usuarios
-Quiero que se puedan crear usuarios en el sistema asignándoles un correo electrónico, una contraseña y un número de teléfono.
+Quiero que se puedan crear usuarios en el sistema asignándoles un correo electrónico, una contraseña y un número de teléfono. En caso de que el usuario sea un proovedor debe de asignársele también el NIF de la empresa, y si es un cliente, el DNI y la fecha de nacimiento de este. 
 
 **Prueba de aceptación**
-- Al crear un nuevo usuario, este se almacena en la base de datos junto a su correo electrónico, su contraseña y su número de teléfono.
-- Si se intenta crear un usuario pero falta alguno de los 3 campos requeridos, el sistema da error y este no se almacena en la base de datos.
+- Al crear un nuevo usuario, este se almacena en la base de datos con todos sus datos correspondientes.
+- Si se intenta crear un usuario pero falta alguno de los campos requeridos, el sistema da error y este no se almacena en la base de datos.
+- Si el correo electrónico no es de la forma XXX@XXX.XXX (siendo X cualquier caracter) el sistema da error y no crea el usuario.
+- Si el número de teléfono no es de la forma +XX XXXXXXXXX (siendo X un número del 0 al 9) el sistema da error y no crea el usuario.
+- En caso de ser un usuario Cliente, si el DNI no es de la forma NNNNNNNNX (siendo N un número del 0 al 9 y X una letra) el sistema da error y no crea el usuario.
+- En caso de ser un usuario Proovedor, si el NIF no es de la forma XNNNNNNNNN (siendo N un número del 0 al 9 y X una letra) el sistema da error y no crea el usuario.
 
 #### R.F.01.02 Consulta de usuarios
-Quiero poder consultar los datos de los usuarios con su correo electrónico, su número de telefono y su contraseña.
+Quiero poder consultar los datos de los usuarios con su correo electrónico y su número de telefono.
 
 **Prueba de aceptación**
 - Si busco un correo electrónico o un número de teléfono en la base de datos, puedo consultar a qué usuario pertenece y ver el resto de sus datos.
@@ -58,6 +62,7 @@ Quiero que se puedan modificar los datos de los usuarios, siempre que los nuevos
 - Si se edita cualquier dato de un usuario, dicho cambio se almacena en la base de datos.
 - Si se intenta editar el correo electrónico de un usuario y el correo al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un correo electrónico distinto.
 - Si se intenta editar el número de teléfono de un usuario y el número al que se quiere cambiar ya se encuentra en la base de datos, el sistema da error y pide que se introduzca un número de teléfono distinto.
+- Si se intenta modificar un usuario y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
 
 #### R.F.01.04 Eliminación de usuarios
 Quiero poder eliminar usuarios del sistema.
@@ -77,17 +82,19 @@ Como responsable de temas legales, quiero que no se pueda crear un usuario si el
 Quiero que se puedan crear eventos en el sistema asignándoles un nombre, una descripción y una fecha, además de asociarle un recinto.
 
 **Pruebas de aceptación**
-- Al crear un nuevo evento, este se almacena en la base de datos junto con su nombre, descripción, fecha, ubicación y aforo.
+- Al crear un nuevo evento, este se almacena en la base de datos junto con su nombre, descripción, fecha, y recinto asociado.
 - Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
 - Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no permite su creación.
 
 #### R.F.02.02 Consulta de eventos
 Quiero poder consultar los datos de los eventos registrados en el sistema con su nombre o su fecha.
+
 **Pruebas de aceptación**
 - Si busco un evento por su nombre o su fecha, el sistema muestra los datos correspondientes de dicho evento.
 
 #### R.F.02.03 Edición de eventos
 Quiero que se puedan modificar los datos de los eventos registrados en el sistema, siempre que los nuevos datos sean válidos.
+
 **Pruebas de aceptación**
 - Si se modifica cualquier dato de un evento, el cambio se almacena en la base de datos.
 - Si se intenta modificar un evento y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
