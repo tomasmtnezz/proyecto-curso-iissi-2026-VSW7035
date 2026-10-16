@@ -13,19 +13,21 @@ En este proyecto crearemos una plataforma de venta de entradas. Nuestra idea es 
 
 ## 2. Glosario de términos
 
-Localidad: Espacio al que se tiene acceso cuando se compra una entrada. 
-
-Aforo: Número máximo de personas que pueden acceder a un recinto.
-
-Backstage: Zona reservada para artistas, técnicos y personal autorizado que se encuentra detrás del escenario.
-
-
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
 
 #### R.G.01. Gestión de usuario
 Como administrador quiero gestionar los usuarios del sistema.
+
+#### R.G.02. Gestión de eventos
+Como administrador quiero gestionar los eventos en el sistema.
+
+#### R.G.03. Gestión de recintos
+Como administrador quiero gestionar los recintos en el sistema.
+
+#### R.G.01. Gestión de localidades
+Como administrador quiero gestionar las localidades del sistema.
 
 
 ### 3.2. Usuarios del sistema
