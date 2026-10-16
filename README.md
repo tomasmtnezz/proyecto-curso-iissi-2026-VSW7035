@@ -106,17 +106,36 @@ Quiero poder eliminar eventos registrados en el sistema.
 - Si se elimina un evento del sistema, la base de datos deja de almacenar sus datos.
 - Si se cancela la eliminación de un evento, este permanece registrado en la base de datos.
 
+#### R.F.03.01 Creación de recintos
+Quiero que se puedan crear recintos en el sistema asignándoles un nombre y una ubicación.
+**Pruebas de aceptación**
+- Al crear un nuevo recinto, este se almacena en la base de datos junto con su nombre y ubicación.
+- Si se intenta crear un recinto y falta alguno de los campos obligatorios, el sistema da error y no almacena el recinto en la base de datos.
+
+#### R.F.03.02 Consulta de recintos
+Quiero poder consultar los datos de los recintos registrados en el sistema mediante su nombre o su ubicación.
+**Pruebas de aceptación**
+- Si busco un recinto por su nombre o su ubicación, el sistema muestra los datos correspondientes a dicho recinto.
+- Si se intenta consultar un recinto que no existe en la base de datos, el sistema informa de que no se ha encontrado ningún recinto que coincida con los criterios de búsqueda.
+
+#### R.F.03.03 Edición de recintos
+Quiero que se puedan modificar los datos de los recintos registrados en el sistema, siempre que los nuevos datos sean válidos.
+**Pruebas de aceptación**
+- Si se modifica cualquier dato de un recinto, el cambio se almacena en la base de datos.
+- Si se intenta modificar un recinto y alguno de los campos obligatorios queda vacío, el sistema da error y no guarda los cambios.
+
+#### R.F.03.04 Eliminación de recintos
+Quiero poder eliminar recintos registrados en el sistema.
+**Pruebas de aceptación**
+- Si se elimina un recinto del sistema, la base de datos deja de almacenar sus datos.
+- Si se cancela la eliminación de un recinto, este permanece registrado en la base de datos.
+  
 #### R.F.04. Notificaciones
 Como desarrollador, quiero que el sistema envíe un correo electrónico al cliente cuando queden 48 horas para que empiece el evento para el cual ha adquirido una localidad.
-
 **Pruebas de aceptación**
-
 - Si quedan 48 horas para empezar un evento, el sistema enviará un correo electrónico a todos los usuarios que hayan comprado una locacalidad para ese evento recordándoselo.
-
 - Si aún no quedan 48 horas para comenzar un evento, no se notificará a los usuarios.
-
 - Si quedan menos de 48 horas para comenzar un evento, se notificará a los usuarios, a no ser que ya hayan sido notificados.
-
 
 #### R.F.05. Unicidad de correo electrónico
 Como desarrollador, quiero que no se pueda crear más de una cuenta con el mismo correo electrónico.
