@@ -300,6 +300,19 @@ El número de localidades pertenecientes a una misma zona vendidas no puede supe
 - Si se han vendido tantas localidades para una zona en un evento como aforo máximo tenga la misma, el sistema no permitirá comprar más localidades, mostrando el mensaje: "Entradas agotadas en esta zona."
 - Si no se han vendido aún tantas localidades para una zona en un evento como aforo máximo tenga la misma, el sistema permitirá la compra de la localidad.
 
+##### R.N.03. Prohibición de uso de zonas de diferentes recintos
+Un mismo evento no puede usar zonas de diferentes recintos.
+
+**Pruebas de aceptación**
+- Si se asocia una zona a un evento con una o varias zonas de otro recinto, el sistema no permitirá asociar esa zona, mostrando el mensaje: "El evento ya está usando zonas de otro recinto."
+- Si se asocia una zona a un evento cuyas zonas pertenecen al mismo recinto, el sistema permitirá la asociación.
+
+##### R.N.04. Límite de precio de entradas
+El precio de una entrada no puede ser mayor al triple del precio de su localidad asociada.
+
+**Pruebas de aceptación**
+- Si se establece un precio a una entrada mayor al triple del precio de su localidad asociada, el sistema no permitirá establecer el precio, mostrando el mensaje: "El precio de una entrada no puede superar al triple del precio de la localidad asociada a esta."
+- Si el precio establecido no supera al triple de la localidad asociada, el sistema permitirá establecer ese precio.
 
 ### 4.2. Mapa de historias de usuario 
 
