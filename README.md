@@ -347,6 +347,7 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 -- fin entregable 1 --
 
 ## 5. Modelo conceptual
+<img width="991" height="1240" alt="ISSIS drawio" src="https://github.com/user-attachments/assets/a91450e3-9932-479f-b0fa-561088e3ed1d" />
 
 ### 5.1. Diagramas de clases UML
 
