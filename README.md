@@ -360,17 +360,17 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | Usuario    | Proveedor   | Cliente   | Evento     |           |           |           |          |
+|       | Usuario    | Proveedor   | Cliente   | Evento     |  Recinto  | Zona      | Localidad | Entrada  |
 |:------|:-----------|:-----------|:-----------|:-----------|:----------|:----------|:----------|:---------|
-| RI.01.01   | X          | X          | X          | X          |           |           |           |          |
-| RI.02.01   |            | X          |            | X          |           |           |           |          |
-| RI.03.01   |            | X          |            | X          |           |           |           |          |
-| RI.04.01  | X          |            | X          | X          |           |           |           |          |
-| RI.05.01  |            | X          |            |            |           |           |           |          |
-| R.N.01 | X          | X          | X          |            |           |           |           |          |
-| R.N.01|            |            |            |            |           |           |           |          |
-| R.N.01 |           |            |            |            |           |           |           |          |
-| R.N.01 |           |            |            |            |           |           |           |          |
+| RI.01.01   | X          | X          | X          |            |           |           |           |          |
+| RI.02.01   |            | X          |            | X          | X           |           |           |          |
+| RI.03.01   |            |            |            |            | X          |           |           |          |
+| RI.04.01  | X          |            |            | X          |           | X           | X          |          |
+| RI.05.01  |            |          |            |            |X           |X           |           |          |
+| R.N.01 | X          |           | X          |X            |           |           | X          |          |
+| R.N.02|            |            |            |            |           | X          | X           |          |
+| R.N.03 |           |            |            | X           | X          | X          |           |          |
+| R.N.04 |           |            |            |            |           |           |  X         |  X        |
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
