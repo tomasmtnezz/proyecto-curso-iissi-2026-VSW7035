@@ -371,7 +371,6 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 | R.N.02|            |            |            |            |           | X          | X           |          |
 | R.N.03 |           |            |            | X           | X          | X          |           |          |
 | R.N.04 |           |            |            |            |           |           |  X         |  X        |
--- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
 
