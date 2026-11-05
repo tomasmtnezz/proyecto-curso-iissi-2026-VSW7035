@@ -360,16 +360,17 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
-
+|       | Usuario    | Proveedor   | Cliente   | Evento     |           |           |           |          |
+|:------|:-----------|:-----------|:-----------|:-----------|:----------|:----------|:----------|:---------|
+| RI.01.01   | X          | X          | X          | X          |           |           |           |          |
+| RI.02.01   |            | X          |            | X          |           |           |           |          |
+| RI.03.01   |            | X          |            | X          |           |           |           |          |
+| RI.04.01  | X          |            | X          | X          |           |           |           |          |
+| RI.05.01  |            | X          |            |            |           |           |           |          |
+| R.N.01 | X          | X          | X          |            |           |           |           |          |
+| R.N.01|            |            |            |            |           |           |           |          |
+| R.N.01 |           |            |            |            |           |           |           |          |
+| R.N.01 |           |            |            |            |           |           |           |          |
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
