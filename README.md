@@ -391,7 +391,8 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 - Acción: El proveedor intenta asignar a la entrada(e1) un precio=100.0. 
 - Resultado esperado: El sistema detecta que el proveedor intenta asignar un precio a la entrada mayor que el del triple de su localidad y bloque la acción, emitiendo un mensaje de error.
 
-<img width="819" height="1024" alt="image" src="https://github.com/user-attachments/assets/a5cb4cfd-29f8-4013-b5d5-ad2f7a9fab26" />
+<img width="819" height="1024" alt="image" src="https://github.com/user-attachments/assets/a5a93168-560b-4ff9-86aa-4938cb110b3d" />
+
 
 ## 6. Matrices de trazabilidad
 
