@@ -94,10 +94,10 @@ Como responsable de temas legales, quiero que no se pueda crear un usuario si el
 - Si el usuario introduce una fecha de nacimiento que indique que es mayor de 16 años, el sistema creará el usuario.
 
 #### R.F.02.01 Creación de eventos
-Quiero que se puedan crear eventos en el sistema asignándoles un id, un nombre, una descripción y una fecha, además de asociarle un recinto.
+Quiero que se puedan crear eventos en el sistema asignándoles un id, un nombre, una descripción y una fecha, además de asociarle unas zonas y un tipoEvento.
 
 **Pruebas de aceptación**
-- Al crear un nuevo evento, este se almacena en la base de datos junto con su id, nombre, descripción, fecha, y recinto asociado.
+- Al crear un nuevo evento, este se almacena en la base de datos junto con su id, nombre, descripción, fecha, e id de la zona y el recinto asociado.
 - Si se intenta crear un evento y falta alguno de los campos obligatorios, el sistema da error y no almacena el evento en la base de datos.
 - Si se intenta crear un evento con una fecha anterior a la actual, el sistema da error y no se almacena el evento en la base de datos.
 - Si se intenta crear un evento cuyo nombre y fecha coincida con el nombre y fecha de un evento almacenado en la base de datos, el sistema da error y no se almacena el evento en la base de datos.
@@ -245,11 +245,11 @@ Quiero disponer de la información correspondiente a los usuarios para llevar un
 
 #### RI.02.01. Información sobre los eventos
 
-Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el id, el nombre, la fecha y el tipo de evento del que se trata, además del id del proveedor y el id del recinto correspondientes. 
+Quiero disponer de la información correspondiente a los eventos para llevar a cabo su organización. Los datos necesarios serán el id, el nombre y la fecha, además del id tipo de evento del que se trata, el id del proveedor y el id del recinto correspondientes. 
 
 **Pruebas de aceptación**
 
-- El sistema almacena la información correspondiente a cada evento, incluyendo su id, su nombre, fecha y el tipo de evento, además de los ids del proveedor y el recinto que le correspondan.
+- El sistema almacena la información correspondiente a cada evento, incluyendo su id, su nombre, fecha, además de los ids del proveedor, el recinto y el tipoEvento que le correspondan.
 - La información almacenada queda asociada al evento correspondiente, de forma que no se confunden los datos de distintos eventos.
 - Si se modifica la información de un evento, el sistema conserva los nuevos datos y permite consultarlos posteriormente.
 
@@ -364,13 +364,13 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 |       | Usuario    | Proveedor   | Cliente   | Evento     |  Recinto  | Zona      | Localidad | Entrada  | tipoEvento | 
 |:------|:-----------|:-----------|:-----------|:-----------|:----------|:----------|:----------|:---------|:-----------|
 | RI.01.01   | X          | X          | X          |            |           |           |           |          |         |
-| RI.02.01   |            | X          |            | X          | X           |           |           |          |         |
+| RI.02.01   |            | X          |            | X          | X           |           |           |          | X       |
 | RI.03.01   |            |            |            |            | X          |           |           |          |         | 
-| RI.04.01  | X          |            |            | X          |           | X           | X          |          |         |
+| RI.04.01  |           |            |            | X          |           | X           | X          |          |         |
 | RI.05.01  |            |          |            |            |X           |X           |           |          |           |  
-| R.N.01 | X          |           | X          |X            |           |           | X          |          |           |
+| R.N.01 |           |           | X          |X            |           |           | X          | X         |           |
 | R.N.02|            |            |            |            |           | X          | X           |          |           |
-| R.N.03 |           |            |            | X           | X          | X          |           |          |           |
+| R.N.03 |           |            |            | X           |X           | X          |           |          |           |
 | R.N.04 |           |            |            |            |           |           |  X         |  X        |           | 
 
 ## 7. Modelo relacional en 3FN
