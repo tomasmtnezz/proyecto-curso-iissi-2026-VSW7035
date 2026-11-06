@@ -324,7 +324,7 @@ Como director del proyecto quiero que la plataformas esté activa lo más cercan
 
 **Pruebas de aceptación**
 - Se lleva a cabo una prueba en la que se realizan pings cada 60 segundos durante 14 días, el tiempo acumulado de inactividad no debe ser superior al 0.1%. (ISO/IEC 25023)
-- 
+  
 #### R.N.F.02 Control de acceso
 Como responsable de temas legales, quiero que solo puedan acceder a la base de datos del sistema los empleados de la organización para cumplir con la Ley de Protección de Datos.
 
@@ -356,9 +356,44 @@ Como responsable de atención al cliente, quiero que el sistema realice una copi
 
 - con descripción textual y diagrama de objetos UML.
 
+### EP-RN01-01 Compra de entradas de una misma zona
+
+- Objetivo: Comprobar que un usuario no pueda comprar más de seis localidades de una zona en un evento.  
+- Precondiciones: Existen un evento(ev1) con una zona1(z1) con siete localidades libres(loc1-7) y un cliente(cl1).  
+- Acción: El cliente intenta comprar siete entradas de la z1. 
+- Resultado esperado: El sistema detecta que el cl1 intenta comprar más de seis entradas de un evento y bloquea la acción, emitiendo un mensaje de error.     
+
+### EP-RN01-02 Compra de entradas de distintas zonas
+
+- Objetivo: Comprobar que un usuario no pueda comprar más de seis localidades de distintas zonas en un evento.  
+- Precondiciones: Existen un evento(ev1) con una zona1(z1) y otra zona(z2) cada una con cinco localidades libres(loc1-5) y un cliente(cl1).  
+- Acción: El cliente intenta comprar tres entradas de la z1 y cuatro de la z2. 
+- Resultado esperado: El sistema detecta que el cl1 intenta comprar más de seis entradas de un evento y bloquea la acción, emitiendo un mensaje de error.
+
+### EP-RN02-01 Compra de entradas por encima del aforo de una zona
+
+- Objetivo: Comprobar que un cliente no pueda comprar entradas una vez superado el aforo de una zona.  
+- Precondiciones: Existen un evento(ev1) con una zona(zVip) con tres localidades(loc1-3) vendidas.  
+- Acción: El cliente intenta comprar una entrada de la zVip. 
+- Resultado esperado: El sistema detecta que el cliente intenta comprar una entrada de una zona cuyo aforo ha sido completado y bloquea la acción, emitiendo un mensaje de error.
+
+### EP-RN03-01 Uso de zonas de diferentes recintos
+
+- Objetivo: Comprobar que un proveedor no pueda usar zonas de diferentes recintos en un evento.  
+- Precondiciones: Existen un evento(ev1) un recinto(r1) con una zona(z1) y otro recinto(r2) con una zona(z2). También existe un proveedor(p1). 
+- Acción: El proveedor intenta usar la zona z1 y la zona z2 en el evento ev1. 
+- Resultado esperado: El sistema detecta que el p1 intenta usar zonas de diferentes recintos en un evento y bloque la acción, emitiendo un mensaje de error.
+
+### EP-RN04-01 Precio de entradas
+
+- Objetivo: Comprobar que un proveedor no pueda asignar a una entrada un precio superior al triple del de su localidad.  
+- Precondiciones: Existen una localidad(loc1) con un precio=30.0 y una entrada(e1) asociada a la localidad.  
+- Acción: El proveedor intenta asignar a la entrada(e1) un precio=100.0. 
+- Resultado esperado: El sistema detecta que el proveedor intenta asignar un precio a la entrada mayor que el del triple de su localidad y bloque la acción, emitiendo un mensaje de error.
+
+
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
 |       | Usuario    | Proveedor   | Cliente   | Evento     |  Recinto  | Zona      | Localidad | Entrada  | tipoEvento | 
 |:------|:-----------|:-----------|:-----------|:-----------|:----------|:----------|:----------|:---------|:-----------|
@@ -405,5 +440,6 @@ Se consideran todo tipo de constraints declarativas (aquellas definidas durante 
 -- fin entregable 3 --
 
 ## Referencias
+
 
 
